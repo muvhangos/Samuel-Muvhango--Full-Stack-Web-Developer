@@ -39,9 +39,12 @@ h3 { font-size:1.3rem; color:#00ffff; margin-bottom:20px; }
 
 /* Skills Track */
 .skills-container { overflow:hidden; margin:40px 0; height:60px; position:relative; }
-.skills-track { display:flex; align-items:center; white-space:nowrap; position:relative; }
+.skills-track { display:flex; align-items:center; white-space:nowrap; position:relative; animation: scrollSkills 20s linear infinite; }
 .skill { background: rgba(0,0,0,0.7); padding:12px 25px; margin-right:15px; border-radius:30px; font-weight:bold; color:#00ffff; box-shadow:0 0 10px #00ffff; animation: glowPulse 2s ease-in-out infinite alternate; }
 @keyframes glowPulse { 0%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;}50%{box-shadow:0 0 15px #00ffff,0 0 30px #ff00ff;color:#ffffff;}100%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;} }
+
+/* Keyframes for scrolling */
+@keyframes scrollSkills { 0%{transform:translateX(0);}100%{transform:translateX(-50%);} }
 
 /* Projects */
 .projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin:40px 0; }
@@ -57,9 +60,6 @@ h3 { font-size:1.3rem; color:#00ffff; margin-bottom:20px; }
 /* Footer */
 footer { margin-top:50px; font-size:0.9rem; color:#aaa; }
 
-/* Skills scroll animation */
-.skills-track { animation: scrollSkills 20s linear infinite; }
-@keyframes scrollSkills { 0%{transform:translateX(0);}100%{transform:translateX(-50%);} }
 </style>
 </head>
 <body>
@@ -87,7 +87,8 @@ footer { margin-top:50px; font-size:0.9rem; color:#aaa; }
         <p>
             I am passionate about programming and full-stack development, constantly exploring new technologies like Node.js, React.js, Django, HTMX, and MERN stack. I enjoy building practical and efficient projects such as School Registration App, Service Request Portal, and Lottery Analyzer.
         </p>
-        <a href="Samuel_Muvhango_CV.pdf" class="cv-btn" download>Download My CV</a>
+        <!-- Updated CV link -->
+        <a href="cv/Samuel_Muvhango_CV.pdf" class="cv-btn" download>Download My CV</a>
     </div>
 
     <!-- Skills Loop -->
