@@ -37,13 +37,48 @@ h3 { font-size:1.3rem; color:#00ffff; margin-bottom:20px; }
 .about h2 { color:#ff00ff; margin-bottom:10px; }
 .about p { line-height:1.6; }
 
-/* Skills Track */
-.skills-container { overflow:hidden; margin:40px 0; height:60px; position:relative; }
-.skills-track { display:flex; align-items:center; white-space:nowrap; position:relative; animation: scrollSkills 20s linear infinite; }
-.skill { background: rgba(0,0,0,0.7); padding:12px 25px; margin-right:15px; border-radius:30px; font-weight:bold; color:#00ffff; box-shadow:0 0 10px #00ffff; animation: glowPulse 2s ease-in-out infinite alternate; }
-@keyframes glowPulse { 0%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;}50%{box-shadow:0 0 15px #00ffff,0 0 30px #ff00ff;color:#ffffff;}100%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;} }
+/* CV Button */
+.cv-btn { display:inline-block; padding:12px 25px; background:#00ffff; color:#000; font-weight:bold; border-radius:30px; margin-top:20px; text-decoration:none; transition: 0.3s; }
+.cv-btn:hover { background:#ff00ff; color:#fff; }
 
-/* Keyframes for scrolling */
+/* Skills Track */
+.skills-container {
+    overflow:hidden;
+    margin:40px 0;
+    height:60px;
+    position:relative;
+}
+.skills-track {
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+    position:relative;
+    animation: scrollSkills 20s linear infinite;
+}
+.skill {
+    background: rgba(0,0,0,0.7);
+    padding:12px 25px;
+    margin-right:15px;
+    border-radius:30px;
+    font-weight:bold;
+    color:#00ffff;
+    box-shadow:0 0 10px #00ffff;
+    animation: glowPulse 2s ease-in-out infinite alternate;
+}
+@keyframes glowPulse {
+    0%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;}
+    50%{box-shadow:0 0 15px #00ffff,0 0 30px #ff00ff;color:#ffffff;}
+    100%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;}
+}
+
+/* Seamless scroll using CSS clone */
+.skills-track::after {
+    content: '';
+    display: block;
+    width: 100%;
+}
+
+/* Scrolling animation */
 @keyframes scrollSkills { 0%{transform:translateX(0);}100%{transform:translateX(-50%);} }
 
 /* Projects */
@@ -52,10 +87,6 @@ h3 { font-size:1.3rem; color:#00ffff; margin-bottom:20px; }
 .project-card:hover { transform:translateY(-10px); }
 .project-card h4 { margin-bottom:10px; color:#00ffff; }
 .project-card p { font-size:0.95rem; line-height:1.5; }
-
-/* CV Button */
-.cv-btn { display:inline-block; padding:12px 25px; background:#00ffff; color:#000; font-weight:bold; border-radius:30px; margin-top:20px; text-decoration:none; transition: 0.3s; }
-.cv-btn:hover { background:#ff00ff; color:#fff; }
 
 /* Footer */
 footer { margin-top:50px; font-size:0.9rem; color:#aaa; }
@@ -68,6 +99,7 @@ footer { margin-top:50px; font-size:0.9rem; color:#aaa; }
 
     <!-- Profile -->
     <div class="profile-wrapper">
+        <!-- Restored profile picture -->
         <img src="images/profile.jpeg" alt="Samuel Muvhango" class="profile">
     </div>
 
@@ -87,7 +119,7 @@ footer { margin-top:50px; font-size:0.9rem; color:#aaa; }
         <p>
             I am passionate about programming and full-stack development, constantly exploring new technologies like Node.js, React.js, Django, HTMX, and MERN stack. I enjoy building practical and efficient projects such as School Registration App, Service Request Portal, and Lottery Analyzer.
         </p>
-        <!-- Updated CV link -->
+        <!-- CV link updated for GitHub folder -->
         <a href="cv/Samuel_Muvhango_CV.pdf" class="cv-btn" download>Download My CV</a>
     </div>
 
