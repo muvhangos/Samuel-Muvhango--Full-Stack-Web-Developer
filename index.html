@@ -11,7 +11,152 @@
 
     <!-- PROFILE IMAGE -->
     <div class="profile-wrapper">
-      <img src="images/profile.jpeg" alt="Samuel Muvhango" class="profile">
+      <img src="images/pro
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Muvhango | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+    color: white;
+    text-align: center;
+}
+
+/* Container */
+.container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+
+/* Profile */
+.profile-wrapper { display:flex; justify-content:center; margin-bottom:20px; }
+.profile { width:160px; height:160px; border-radius:50%; object-fit:cover; border:4px solid #00ffff; animation: floatImage 4s ease-in-out infinite; }
+@keyframes floatImage { 0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);} }
+
+/* Headings */
+h1 { font-size:2.5rem; margin-bottom:5px; }
+h3 { font-size:1.3rem; color:#00ffff; margin-bottom:20px; }
+
+/* Contact */
+.contact p { margin:5px 0; font-size:1rem; }
+
+/* About Me */
+.about { background: rgba(0,0,0,0.6); padding:20px; border-radius:15px; margin: 30px 0; }
+.about h2 { color:#ff00ff; margin-bottom:10px; }
+.about p { line-height:1.6; }
+
+/* Skills Track */
+.skills-container { overflow:hidden; margin:40px 0; height:60px; position:relative; }
+.skills-track { display:flex; align-items:center; white-space:nowrap; position:relative; }
+.skill { background: rgba(0,0,0,0.7); padding:12px 25px; margin-right:15px; border-radius:30px; font-weight:bold; color:#00ffff; box-shadow:0 0 10px #00ffff; animation: glowPulse 2s ease-in-out infinite alternate; }
+@keyframes glowPulse { 0%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;}50%{box-shadow:0 0 15px #00ffff,0 0 30px #ff00ff;color:#ffffff;}100%{box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff;color:#00ffff;} }
+
+/* Projects */
+.projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin:40px 0; }
+.project-card { background: rgba(0,0,0,0.7); padding:20px; border-radius:15px; transition: transform 0.3s ease; }
+.project-card:hover { transform:translateY(-10px); }
+.project-card h4 { margin-bottom:10px; color:#00ffff; }
+.project-card p { font-size:0.95rem; line-height:1.5; }
+
+/* CV Button */
+.cv-btn { display:inline-block; padding:12px 25px; background:#00ffff; color:#000; font-weight:bold; border-radius:30px; margin-top:20px; text-decoration:none; transition: 0.3s; }
+.cv-btn:hover { background:#ff00ff; color:#fff; }
+
+/* Footer */
+footer { margin-top:50px; font-size:0.9rem; color:#aaa; }
+
+/* Skills scroll animation */
+.skills-track { animation: scrollSkills 20s linear infinite; }
+@keyframes scrollSkills { 0%{transform:translateX(0);}100%{transform:translateX(-50%);} }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Profile -->
+    <div class="profile-wrapper">
+        <img src="images/profile.jpeg" alt="Samuel Muvhango" class="profile">
+    </div>
+
+    <h1>Samuel Muvhango</h1>
+    <h3>Full-Stack Web Developer</h3>
+
+    <!-- Contact -->
+    <div class="contact">
+        <p>Email: muvhangos@gmail.com</p>
+        <p>Contact: +27 72 495 5002</p>
+        <p>Alternative: +27 83 787 2798</p>
+    </div>
+
+    <!-- About Me -->
+    <div class="about">
+        <h2>About Me</h2>
+        <p>
+            I am passionate about programming and full-stack development, constantly exploring new technologies like Node.js, React.js, Django, HTMX, and MERN stack. I enjoy building practical and efficient projects such as School Registration App, Service Request Portal, and Lottery Analyzer.
+        </p>
+        <a href="Samuel_Muvhango_CV.pdf" class="cv-btn" download>Download My CV</a>
+    </div>
+
+    <!-- Skills Loop -->
+    <div class="skills-container">
+        <div class="skills-track">
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">React</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">Django</span>
+            <span class="skill">School Registration App</span>
+            <span class="skill">Service Request Portal</span>
+            <span class="skill">Lottery Analyzer</span>
+
+            <!-- duplicate for seamless loop -->
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">React</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">Django</span>
+            <span class="skill">School Registration App</span>
+            <span class="skill">Service Request Portal</span>
+            <span class="skill">Lottery Analyzer</span>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="projects">
+        <div class="project-card">
+            <h4>School Registration App</h4>
+            <p>Full-stack education registration system with admin dashboard and parent portal.</p>
+        </div>
+        <div class="project-card">
+            <h4>Service Request Portal</h4>
+            <p>Django + HTMX CRUD portal with real-time updates and Bootstrap interface.</p>
+        </div>
+        <div class="project-card">
+            <h4>Lottery Analyzer</h4>
+            <p>Smart lotto number generator with trend analysis and secure login system.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    Designed & Developed by Samuel Muvhango | Email: muvhangos@gmail.com
+</footer>
+
+</body>
+</html>
+file.jpeg" alt="Samuel Muvhango" class="profile">
 
  </div>
 
@@ -57,6 +202,7 @@
 
 </body>
 </html>
+
 
 
 
