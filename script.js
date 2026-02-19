@@ -1,46 +1,29 @@
-const skills = [
-  "HTML5", "CSS3", "JavaScript", "Node.js",
-  "React", "MongoDB", "Django",
-  "School Registration App",
-  "Service Request Portal",
-  "Lottery Analyzer"
-];
+/* Fade-in + Slide-in Animation for sections & project cards */
+const sections = document.querySelectorAll(".section");
+const projectCards = document.querySelectorAll(".project-card");
 
-const track = document.getElementById("skills-track");
+window.addEventListener("scroll", () => {
+    const triggerBottom = window.innerHeight - 100;
 
-skills.forEach(skill => {
-    const div = document.createElement("div");
-    div.className = "skill";
-    div.textContent = skill;
-    track.appendChild(div);
+    // Sections fade in
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if(top < triggerBottom){
+            section.classList.add("visible");
+        }
+    });
+
+    // Project cards slide in
+    projectCards.forEach((card, index) => {
+        const top = card.getBoundingClientRect().top;
+        if(top < triggerBottom){
+            card.classList.add("visible");
+            // Alternate left/right slide
+            if(index % 2 === 0){
+                card.classList.remove("slide-right");
+            } else {
+                card.classList.add("slide-right");
+            }
+        }
+    });
 });
-
-let scroll = 0;
-
-function animate() {
-    scroll++;
-    track.style.transform = `translateX(-${scroll}px)`;
-
-    if (scroll > track.scrollWidth / 2) {
-        scroll = 0;
-    }
-
-    requestAnimationFrame(animate);
-}
-
-animate();
-
-// Typewriter
-const text = "Full Stack Developer";
-const type = document.getElementById("typewriter");
-let i = 0;
-
-function typing() {
-    if (i < text.length) {
-        type.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 100);
-    }
-}
-
-typing();
