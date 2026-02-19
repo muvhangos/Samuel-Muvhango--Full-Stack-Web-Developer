@@ -1,21 +1,15 @@
-/* ================= ICON PULSE ANIMATION ================= */
-.project-card h4 i {
-    transition: transform 0.3s, color 0.3s;
+/* ================= PROJECT SLIDE-IN ANIMATION ================= */
+.project-card {
+    opacity: 0;
+    transform: translateX(-50px); /* default slide from left */
+    transition: all 0.6s ease;
 }
 
-.project-card:hover h4 i {
-    transform: scale(1.4) rotate(5deg);
-    color: #0ff; /* glow effect color */
-    text-shadow: 0 0 8px #0ff;
+.project-card.slide-right {
+    transform: translateX(50px); /* slide from right */
 }
 
-/* Optional: continuous gentle pulse on all icons (subtle) */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-.project-card h4 i.pulse {
-    animation: pulse 2s infinite;
+.project-card.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
