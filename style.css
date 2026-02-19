@@ -1,4 +1,3 @@
-/* SKILLS GRID */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -29,18 +28,4 @@
 
 .skill:hover img {
     transform: scale(1.2) rotate(10deg);
-}
-
-/* PROFILE PICTURE ANIMATION */
-.profile {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #0d6efd;
-    transition: transform 0.5s;
-}
-
-.profile:hover {
-    transform: rotate(10deg) scale(1.05);
 }
