@@ -172,10 +172,20 @@ h3 {
     border-radius:15px;
     transition:0.3s, transform 0.3s, box-shadow 0.3s;
     border-left: 5px solid #0ff; /* default border */
+    opacity: 0;
+    transform: translateX(-50px); /* initial slide-left */
+}
+
+.project-card.slide-right {
+    transform: translateX(50px); /* initial slide-right */
+}
+
+.project-card.visible {
+    opacity:1;
+    transform: translateX(0);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
     box-shadow:0 10px 20px rgba(0,255,255,0.3);
 }
 
@@ -277,49 +287,49 @@ h3 {
         <h2>Projects</h2>
         <div class="projects">
 
-            <div class="project-card js">
+            <div class="project-card js slide-right">
                 <h4>Joke Generator App <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
                 <p>Generate random jokes with a fun UI. Built with JavaScript.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card python">
+            <div class="project-card python slide-right">
                 <h4>School Registration Form <i class="fab fa-python pulse" style="color:#306998;"></i></h4>
                 <p>Django + HTMX CRUD admission system.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card js">
+            <div class="project-card js slide-right">
                 <h4>Shopping Cart <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
                 <p>E-commerce shopping cart implementation with product management.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card js">
+            <div class="project-card js slide-right">
                 <h4>Guessing Game <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
                 <p>Interactive number guessing game built with JavaScript.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card react">
+            <div class="project-card react slide-right">
                 <h4>Weather Predictive App <i class="fab fa-react pulse" style="color:#61dafb;"></i></h4>
                 <p>Check weather forecasts using API integration (OpenWeatherMap).</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card react">
+            <div class="project-card react slide-right">
                 <h4>Greeting App <i class="fab fa-react pulse" style="color:#61dafb;"></i></h4>
                 <p>Interactive web app to send and display greetings with animations.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card firebase">
+            <div class="project-card firebase slide-right">
                 <h4>Firebase Project <i class="fas fa-fire pulse" style="color:#ff6f00;"></i></h4>
                 <p>Cloud-based app leveraging Firebase for authentication and database.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card lotto">
+            <div class="project-card lotto slide-right">
                 <h4>Lottery Analyzer <i class="fas fa-chart-line pulse" style="color:#0ff;"></i></h4>
                 <p>Smart lotto analytics tool for trends and number prediction.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
@@ -369,13 +379,32 @@ h3 {
 </a>
 
 <script>
-/* Fade-in Animation */
+/* Fade-in + Slide-in Animation */
 const sections = document.querySelectorAll(".section");
+const projectCards = document.querySelectorAll(".project-card");
+
 window.addEventListener("scroll", () => {
+    const triggerBottom = window.innerHeight - 100;
+
+    // Sections fade in
     sections.forEach(section => {
-        const position = section.getBoundingClientRect().top;
-        if(position < window.innerHeight - 100){
+        const top = section.getBoundingClientRect().top;
+        if(top < triggerBottom){
             section.classList.add("visible");
+        }
+    });
+
+    // Project cards slide in
+    projectCards.forEach((card, index) => {
+        const top = card.getBoundingClientRect().top;
+        if(top < triggerBottom){
+            card.classList.add("visible");
+            // Alternate left/right slide
+            if(index % 2 === 0){
+                card.classList.remove("slide-right");
+            } else {
+                card.classList.add("slide-right");
+            }
         }
     });
 });
