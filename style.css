@@ -1,69 +1,26 @@
-body {
-    margin: 0;
-    background: #111;
+.cv-section {
+    margin-top: 30px;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0d6efd;
     color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.container {
-    padding: 40px 20px;
+.cv-button:hover {
+    background-color: #084298;
 }
 
-/* PROFILE IMAGE CENTERED */
-.profile-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.links a {
+    text-decoration: none;
+    color: #0d6efd;
 }
 
-.profile {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #00adb5;
-    animation: float 3s ease-in-out infinite;
-}
-
-/* FLOAT ANIMATION */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
-}
-
-/* CONTACT SECTION */
-.contact {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    line-height: 1.8;
-    color: #00adb5;
-}
-
-/* SKILLS LOOP */
-.skills-container {
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.skills-track {
-    display: inline-block;
-    animation: scroll 18s linear infinite;
-}
-
-.skills-track span {
-    display: inline-block;
-    margin: 0 20px;
-    padding: 10px 18px;
-    background: #00adb5;
-    border-radius: 20px;
-    font-weight: bold;
-    color: black;
-}
-
-/* CONTINUOUS SCROLL */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+.links a:hover {
+    text-decoration: underline;
 }
