@@ -1,330 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samuel Muvhango | Full-Stack Web Developer</title>
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-/* ================= BODY ================= */
-body {
-    margin:0;
-    font-family:'Segoe UI', sans-serif;
-    background-color: #1e1e2f;
-    color:#fff;
-    scroll-behavior:smooth;
-}
-
-/* ================= NAVIGATION ================= */
-nav {
-    position: sticky;
-    top:0;
-    background:#12121b;
-    padding: 10px 0;
-    text-align:center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    z-index:1000;
-}
-
-nav a {
-    margin:0 15px;
-    text-decoration:none;
-    color:#ccc;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-nav a:hover {
-    color:#0ff;
-}
-
-/* ================= CONTAINER ================= */
-.container {
-    max-width:1000px;
-    margin:40px auto;
-    padding:20px;
-}
-
-/* ================= HEADER ================= */
-.header {
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.profile {
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid #0ff;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-h1 {
-    margin:15px 0 5px;
-    color:#fff;
-}
-
-h3 {
-    color:#0ff;
-    margin-bottom:15px;
-}
-
-/* ================= ABOUT ME ================= */
-.header p {
-    max-width:600px;
-    margin:0 auto;
-    color:#ccc;
-}
-
-/* ================= BUTTON ================= */
-.btn {
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:#0ff;
-    color:#000;
-    text-decoration:none;
-    border-radius:25px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover {
-    background:#0aa;
-    color:#fff;
-}
-
-/* ================= SECTIONS ================= */
-.section {
-    margin-top:50px;
-    opacity:0;
-    transform: translateY(20px);
-    transition:0.6s ease;
-}
-
-.section.visible {
-    opacity:1;
-    transform:translateY(0);
-}
-
-.section h2 {
-    color:#0ff;
-    margin-bottom:20px;
-    border-bottom:2px solid #0ff;
-    display:inline-block;
-}
-
-/* ================= SKILLS ================= */
-.skills-grid {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-    margin-top:20px;
-}
-
-.skill {
-    background: #2b2b3c;
-    padding:10px 15px;
-    border-radius:25px;
-    text-align:center;
-    color:#0ff;
-    font-weight:bold;
-    box-shadow:0 0 10px #0ff50f55;
-    transition:0.3s;
-}
-
-.skill:hover {
-    box-shadow: 0 0 20px #0ff;
-    transform: translateY(-5px);
-}
-
-/* ================= PROJECTS ================= */
-.projects {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:20px;
-}
-
-.project-card {
-    background:#2b2b3c;
-    padding:20px;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow:0 10px 20px rgba(0,255,255,0.3);
-}
-
-/* ================= CONTACT ================= */
-.contact a {
-    text-decoration:none;
-    color:#0ff;
-    font-weight:bold;
-}
-
-.contact a:hover {
-    color:#0aa;
-}
-
-/* ================= FLOATING WHATSAPP ================= */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    color:white;
-    text-decoration:none;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-<nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-
-    <!-- ABOUT -->
-    <div id="about" class="header section">
-        <img src="images/profile.jpeg" class="profile">
-        <h1>Samuel Muvhango</h1>
-        <h3>Full-Stack Web Developer</h3>
-        <p>
-            I am passionate about programming and full-stack development, constantly exploring technologies like Node.js, React, Django, HTMX, and MERN stack.
-        </p>
-       <a href="cv/Samuel_Muvhango_CV.pdf" download="Samuel_Muvhango_CV.pdf">
-    Download My CV
-</a>
-    </div>
-
-    <!-- EXPERIENCE -->
-    <div id="experience" class="section">
-        <h2>Experience</h2>
-        <p><strong>Gijima Technologies – Field Service Engineer</strong></p>
-        <p>Linux configuration, POS installations, ATM & network support.</p>
-
-        <p><strong>Dimension Data – AD & Messaging Engineer</strong></p>
-        <p>Active Directory, Exchange 2010, Lync Server administration.</p>
-    </div>
-
-    <!-- PROJECTS -->
-    <div id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects">
-
-            <div class="project-card">
-                <h4>School Registration App</h4>
-                <p>Django + HTMX CRUD admission system.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card">
-                <h4>Service Request Portal</h4>
-                <p>Dynamic web service management app.</p>
-                <p>Joke Generator app.</p>
-                <p>School Registration form.</p>
-                <p>Shopping Cart.</p>
-                <p>Guessing Game.</p>
-                <p>Weather Predictive app.</p>
-                <p>Greeting app.</p>
-                <p>Fire base Project.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card">
-                <h4>Lottery Analyzer</h4>
-                <p>Smart lotto analytics tool.</p>
-                
-        <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
+        <div class="project-card">
+            <h4>Joke Generator App</h4>
+            <p>Generate random jokes with a fun UI. Built with JavaScript.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
         </div>
-    </div>
 
-    <!-- SKILLS -->
-    <div id="skills" class="section">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">HTMX</div>
-            <div class="skill">React</div>
-            <div class="skill">Node.js</div>
-            <div class="skill">Python</div>
-            <div class="skill">SQL</div>
-            <div class="skill">MongoDB</div>
-            <div class="skill">MERN Stack</div>
-            <div class="skill">Spring Boot</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Aws</div>
-            <div class="skill">Azure</div>
-            <div class="skill">REST APIs</div>
-            <div class="skill">JWT Authentication</div>
-            <div class="skill">Bootstrap</div>
-            <div class="skill">Frontend & Backend</div>
-            <div class="skill">GitHub</div>
+        <div class="project-card">
+            <h4>School Registration Form</h4>
+            <p>Django + HTMX CRUD admission system.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
         </div>
-    </div>
 
-    <!-- CONTACT -->
-    <div id="contact" class="section contact">
-        <h2>Contact</h2>
-        <p>Email: muvhangos@gmail.com</p>
-        <p>
-            <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
-            <a href="https://wa.me/27724955002" target="_blank">+27 72 495 5002</a>
-        </p>
-    </div>
+        <div class="project-card">
+            <h4>Shopping Cart</h4>
+            <p>E-commerce shopping cart implementation with product management.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
 
+        <div class="project-card">
+            <h4>Guessing Game</h4>
+            <p>Interactive number guessing game built with JavaScript.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h4>Weather Predictive App</h4>
+            <p>Check weather forecasts using API integration (OpenWeatherMap).</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h4>Greeting App</h4>
+            <p>Interactive web app to send and display greetings with animations.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h4>Firebase Project</h4>
+            <p>Cloud-based app leveraging Firebase for authentication and database.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h4>Lottery Analyzer</h4>
+            <p>Smart lotto analytics tool for trends and number prediction.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+    </div>
 </div>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/27724955002?text=Hello%20Samuel%20I%20viewed%20your%20portfolio" class="whatsapp" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<script>
-/* Fade-in Animation */
-const sections = document.querySelectorAll(".section");
-window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        const position = section.getBoundingClientRect().top;
-        if(position < window.innerHeight - 100){
-            section.classList.add("visible");
-        }
-    });
-});
-</script>
-
-</body>
-</html>
-
-
-
