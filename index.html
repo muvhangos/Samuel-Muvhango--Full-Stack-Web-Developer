@@ -9,13 +9,39 @@
 
 <style>
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
     background:linear-gradient(135deg,#eef2f7,#d9e2ec);
 }
 
-/* MAIN CARD */
+/* NAVIGATION */
+nav{
+    position:sticky;
+    top:0;
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+nav a{
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#333;
+}
+
+nav a:hover{
+    color:#0d6efd;
+}
+
+/* CONTAINER */
 .container{
     max-width:1000px;
     margin:40px auto;
@@ -25,7 +51,11 @@ body{
     box-shadow:0 10px 40px rgba(0,0,0,0.1);
 }
 
-/* PROFILE */
+/* HEADER */
+.header{
+    text-align:center;
+}
+
 .profile{
     width:150px;
     height:150px;
@@ -34,24 +64,10 @@ body{
     border:4px solid #0d6efd;
 }
 
-.header{
-    text-align:center;
-}
-
-h1{
-    margin:15px 0 5px;
-}
-
-h3{
-    color:#666;
-}
+h1{ margin:15px 0 5px; }
+h3{ color:#666; }
 
 /* CONTACT */
-.contact{
-    text-align:center;
-    margin-top:15px;
-}
-
 .contact a{
     text-decoration:none;
     color:#333;
@@ -62,9 +78,17 @@ h3{
     color:#25D366;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
-    margin-top:40px;
+    margin-top:50px;
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.6s ease;
+}
+
+.section.visible{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .section h2{
@@ -73,7 +97,7 @@ h3{
     display:inline-block;
 }
 
-/* PROJECT CARDS */
+/* PROJECTS */
 .projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -93,42 +117,38 @@ h3{
     box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* SKILLS SCROLL */
-.skills-container{
-    margin-top:20px;
-    overflow:hidden;
-    white-space:nowrap;
-}
-
-.skills-track{
+/* BUTTON */
+.btn{
     display:inline-block;
-    animation:scroll 20s linear infinite;
-}
-
-.skills-track span{
-    margin:0 25px;
-    font-weight:bold;
-    color:#333;
-}
-
-@keyframes scroll{
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
-
-/* CV BUTTON */
-.cv-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 20px;
+    margin-top:15px;
+    padding:8px 15px;
     background:#0d6efd;
     color:white;
     text-decoration:none;
     border-radius:5px;
+    font-size:14px;
 }
 
-.cv-btn:hover{
+.btn:hover{
     background:#084298;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:white;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -136,17 +156,80 @@ h3{
 
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <div class="container">
 
-    <!-- HEADER -->
-    <div class="header">
+    <!-- ABOUT -->
+    <div id="about" class="header section">
         <img src="images/profile.jpeg" class="profile">
         <h1>Samuel Muvhango</h1>
         <h3>Full-Stack Web Developer</h3>
+        <p>
+            Passionate about building scalable web applications using 
+            Django, Node.js, React, and modern cloud technologies.
+        </p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div id="experience" class="section">
+        <h2>Experience</h2>
+        <p><strong>Gijima Technologies – Field Service Engineer</strong></p>
+        <p>Linux configuration, POS installations, ATM & network support.</p>
+
+        <p><strong>Dimension Data – AD & Messaging Engineer</strong></p>
+        <p>Active Directory, Exchange 2010, Lync Server administration.</p>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h4>School Registration App</h4>
+                <p>Django + HTMX CRUD admission system.</p>
+                <a href="https://github.com/muvhangos" target="_blank" class="btn">
+                    View Code
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h4>Service Request Portal</h4>
+                <p>Dynamic web service management app.</p>
+                <a href="https://github.com/muvhangos" target="_blank" class="btn">
+                    View Code
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h4>Lottery Analyzer</h4>
+                <p>Smart lotto analytics tool.</p>
+                <a href="https://github.com/muvhangos" target="_blank" class="btn">
+                    View Code
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="section">
+        <h2>Technical Skills</h2>
+        <p>HTML • CSS • JavaScript • Node.js • React • MongoDB • Django • Python • AWS • Azure</p>
     </div>
 
     <!-- CONTACT -->
-    <div class="contact">
+    <div id="contact" class="section contact">
+        <h2>Contact</h2>
         <p>Email: muvhangos@gmail.com</p>
 
         <p>
@@ -156,81 +239,34 @@ h3{
             </a>
         </p>
 
-        <p>
-            <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
-            <a href="https://wa.me/27837872798" target="_blank">
-                +27 83 787 2798
-            </a>
-        </p>
-
-        <a href="cv/Samuel_Muvhango_CV_2026.pdf" download class="cv-btn">
-            📄 Download CV
+        <a href="cv/Samuel_Muvhango_CV_2026.pdf" download class="btn">
+            Download CV
         </a>
     </div>
 
-    <!-- EXPERIENCE -->
-    <div class="section">
-        <h2>Experience</h2>
-        <p><strong>Field Service Engineer – Gijima Technologies</strong></p>
-        <p>Linux device configuration, POS installations, ATM support, network troubleshooting.</p>
-
-        <p><strong>AD & Messaging Engineer – Dimension Data</strong></p>
-        <p>Active Directory management, Exchange 2010 administration, Lync Server support.</p>
-    </div>
-
-    <!-- PROJECTS -->
-    <div class="section">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h4>School Registration App</h4>
-                <p>Django + HTMX CRUD admission system.</p>
-            </div>
-
-            <div class="project-card">
-                <h4>Service Request Portal</h4>
-                <p>Dynamic service management web app.</p>
-            </div>
-
-            <div class="project-card">
-                <h4>Lottery Analyzer</h4>
-                <p>Smart lotto tool with number analysis logic.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skills-track">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>React</span>
-                <span>MongoDB</span>
-                <span>Django</span>
-                <span>Python</span>
-                <span>AWS</span>
-                <span>Azure</span>
-
-                <!-- duplicate -->
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>React</span>
-                <span>MongoDB</span>
-                <span>Django</span>
-                <span>Python</span>
-                <span>AWS</span>
-                <span>Azure</span>
-            </div>
-        </div>
-    </div>
-
 </div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/27724955002?text=Hello%20Samuel%20I%20viewed%20your%20portfolio"
+   class="whatsapp" target="_blank">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+
+/* Fade-in Animation */
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        if(position < window.innerHeight - 100){
+            section.classList.add("visible");
+        }
+    });
+});
+
+</script>
 
 </body>
 </html>
