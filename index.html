@@ -1,87 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Samuel Muvhango</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Muvhango | Full-Stack Developer</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root{
+    --primary:#0d6efd;
+    --dark:#121212;
+    --light:#ffffff;
+    --gray:#888;
+}
+
+body{
+    margin:0;
+    font-family:Segoe UI, sans-serif;
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:white;
+    transition:0.4s;
+}
+
+/* DARK MODE */
+body.dark{
+    background:#121212;
+    color:white;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+/* PROFILE CARD */
+.card{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:4px solid white;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+h1{
+    margin:10px 0 5px;
+}
+
+h3{
+    color:#ddd;
+}
+
+/* CONTACT */
+.contact p{
+    margin:10px 0;
+}
+
+.contact a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact a:hover{
+    color:#25D366;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    margin-top:15px;
+    background:white;
+    color:#0d6efd;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* SKILLS */
+.skills{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.skill{
+    background:white;
+    color:#333;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    text-decoration:none;
+}
+
+/* DARK MODE TOGGLE */
+.toggle{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:white;
+    color:#333;
+    border:none;
+    padding:8px 15px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+</style>
 </head>
+
 <body>
 
+<button class="toggle" onclick="toggleMode()">🌙 Mode</button>
+
 <div class="container">
+    <div class="card">
 
-    <!-- PROFILE IMAGE -->
-    <div class="profile-wrapper">
-      <img src="images/profile.jpeg" alt="Samuel Muvhango" class="profile">
-    </div>
+        <img src="images/profile.jpeg" class="profile">
 
-    <h1>Samuel Muvhango</h1>
-    <h3>Full-Stack Web Developer</h3>
+        <h1>Samuel Muvhango</h1>
+        <h3>Full-Stack Web Developer</h3>
 
-    <!-- CONTACT INFO -->
-    <div class="contact">
-        <p>Email: muvhangos@gmail.com</p>
-        <p>Contact: +27 72 495 5002</p>
-        <p>Alternative: +27 83 787 2798</p>
-        <p>Location: Johannesburg, South Africa</p>
-    </div>
+        <div class="contact">
+            <p>Email: muvhangos@gmail.com</p>
 
-    <!-- PROFESSIONAL LINKS -->
-    <div class="links">
-        <h2>Professional Profiles</h2>
-        <p><a href="https://muvhangos.github.io/SamsPortfolio/" target="_blank">🌐 Portfolio Website</a></p>
-        <p><a href="https://github.com/muvhangos" target="_blank">💻 GitHub</a></p>
-        <p><a href="https://www.linkedin.com/in/samuel-muvhango-78821a112" target="_blank">🔗 LinkedIn</a></p>
-        <p><a href="https://www.credly.com/users/samuel-muvhango" target="_blank">🏅 Certifications (Credly)</a></p>
-    </div>
+            <p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/27724955002" target="_blank">
+                    +27 72 495 5002
+                </a>
+            </p>
 
-    <!-- CV DOWNLOAD SECTION -->
-    <div class="cv-section">
-        <h2>Download My CV</h2>
-        <a href="cv/Samuel_Muvhango_CV_2026.pdf" download class="cv-button">
+            <p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/27837872798" target="_blank">
+                    +27 83 787 2798
+                </a>
+            </p>
+
+            <p>Johannesburg, South Africa</p>
+        </div>
+
+        <a href="cv/Samuel_Muvhango_CV_2026.pdf" download class="btn">
             📄 Download CV
         </a>
-    </div>
 
-    <!-- EDUCATION SUMMARY -->
-    <div class="education">
-        <h2>Education</h2>
-        <p><strong>BSc Information Technology</strong> – Richfield Graduate Institute of Technology (Current)</p>
-        <p><strong>Full Stack Web Developer Bootcamp</strong> – Code College</p>
-    </div>
-
-    <!-- SKILLS LOOP -->
-    <div class="skills-container">
-        <div class="skills-track">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-            <span>Node.js</span>
-            <span>React</span>
-            <span>MongoDB</span>
-            <span>Django</span>
-            <span>HTMX</span>
-            <span>Python</span>
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>Network Security</span>
-
-            <!-- duplicate for loop -->
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-            <span>Node.js</span>
-            <span>React</span>
-            <span>MongoDB</span>
-            <span>Django</span>
-            <span>HTMX</span>
-            <span>Python</span>
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>Network Security</span>
+        <div class="skills">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">React</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">Django</div>
+            <div class="skill">Python</div>
+            <div class="skill">AWS</div>
+            <div class="skill">Azure</div>
+            <div class="skill">Network Security</div>
         </div>
-    </div>
 
+    </div>
 </div>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/27724955002?text=Hello%20Samuel%20I%20viewed%20your%20portfolio"
+   class="whatsapp-float" target="_blank">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+function toggleMode(){
+    document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
