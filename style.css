@@ -1,15 +1,41 @@
-/* ================= PROJECT SLIDE-IN ANIMATION ================= */
-.project-card {
-    opacity: 0;
-    transform: translateX(-50px); /* default slide from left */
-    transition: all 0.6s ease;
+/* ================= SKILL ANIMATION UPGRADE ================= */
+.skill {
+    background: #2b2b3c;
+    padding:10px 15px;
+    border-radius:25px;
+    text-align:center;
+    color:#0ff;
+    font-weight:bold;
+    box-shadow:0 0 10px #0ff50f55;
+    transition:0.4s ease;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    position:relative;
+    overflow:hidden;
 }
 
-.project-card.slide-right {
-    transform: translateX(50px); /* slide from right */
+/* Gentle floating animation */
+@keyframes floatSkill {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
 }
 
-.project-card.visible {
-    opacity: 1;
-    transform: translateX(0);
+.skill i {
+    font-size:18px;
+    transition:0.4s ease;
+    animation: floatSkill 3s ease-in-out infinite;
+}
+
+/* Hover effect */
+.skill:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0 20px #0ff;
+}
+
+.skill:hover i {
+    transform: rotate(10deg) scale(1.4);
+    color:#fff;
+    text-shadow: 0 0 10px #0ff;
 }
