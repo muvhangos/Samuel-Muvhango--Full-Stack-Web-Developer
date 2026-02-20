@@ -7,7 +7,24 @@ window.addEventListener("scroll", () => {
 
     // Sections fade in
     sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
+        constconst sections = document.querySelectorAll(".section");
+const projectCards = document.querySelectorAll(".project-card");
+
+window.addEventListener("scroll", () => {
+    const triggerBottom = window.innerHeight - 100;
+
+    sections.forEach(section => {
+        if(section.getBoundingClientRect().top < triggerBottom){
+            section.classList.add("visible");
+        }
+    });
+
+    projectCards.forEach((card, index) => {
+        if(card.getBoundingClientRect().top < triggerBottom){
+            card.classList.add("visible");
+        }
+    });
+}); top = section.getBoundingClientRect().top;
         if(top < triggerBottom){
             section.classList.add("visible");
         }
@@ -63,4 +80,5 @@ function typeEffect() {
 }
 
 typeEffect();
+
 
