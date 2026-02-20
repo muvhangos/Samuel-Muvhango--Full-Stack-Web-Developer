@@ -35,80 +35,98 @@ nav a:hover { color:#0ff; }
 .header { text-align:center; margin-bottom:40px; }
 
 .profile {
-    width:150px; height:150px;
+    width:150px;
+    height:150px;
     border-radius:50%;
     object-fit:cover;
     border:4px solid #0ff;
     animation: float 3s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* ================= NAME SCROLL ================= */
-.name-scroll { overflow:hidden; white-space:nowrap; width:100%; margin:15px 0 5px; }
-.name-scroll h1 {
-    display:inline-block; padding-left:100%;
-    animation: scrollName 12s linear infinite;
-    font-size:32px; color:#fff;
-}
-
-@keyframes scrollName {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
+@keyframes float { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-15px); } }
 
 h3 { color:#0ff; margin-bottom:15px; }
-.header p { max-width:600px; margin:0 auto; color:#ccc; }
+
+/* ================= TYPING NAME ================= */
+.typed-name {
+    display:inline-block;
+    font-size:32px;
+    color:#fff;
+    border-right:3px solid #0ff;
+    white-space:nowrap;
+    overflow:hidden;
+    width:0;
+    animation: typing 3s steps(16,end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing { from{width:0;} to{width:16ch;} }
+@keyframes blink { 50%{ border-color: transparent; } }
 
 /* ================= BUTTON ================= */
 .btn {
-    display:inline-block; margin-top:15px; padding:10px 20px;
-    background:#0ff; color:#000; text-decoration:none;
-    border-radius:25px; font-weight:bold; transition:0.3s;
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#0ff;
+    color:#000;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    transition:0.3s;
 }
+
 .btn:hover { background:#0aa; color:#fff; }
 
 /* ================= SECTIONS ================= */
-.section {
-    margin-top:50px;
-    opacity:0;
-    transform: translateY(20px);
-    transition:0.6s ease;
-}
+.section { margin-top:50px; opacity:0; transform: translateY(20px); transition:0.6s ease; }
 .section.visible { opacity:1; transform:translateY(0); }
 .section h2 { color:#0ff; margin-bottom:20px; border-bottom:2px solid #0ff; display:inline-block; }
 
 /* ================= SKILLS ================= */
 .skills-grid {
-    display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
 }
 
 .skill {
-    background:#2b2b3c; padding:10px 15px;
-    border-radius:25px; text-align:center; color:#0ff;
-    font-weight:bold; box-shadow:0 0 10px #0ff50f55;
-    transition:0.4s ease; display:flex; align-items:center; gap:8px; position:relative; overflow:hidden;
+    background:#2b2b3c;
+    padding:10px 15px;
+    border-radius:25px;
+    text-align:center;
+    color:#0ff;
+    font-weight:bold;
+    box-shadow:0 0 10px #0ff50f55;
+    transition:0.4s ease;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    position:relative;
+    overflow:hidden;
 }
 
-/* Floating icon animation */
-@keyframes floatSkill {0%{transform:translateY(0);}50%{transform:translateY(-4px);}100%{transform:translateY(0);}}
 .skill i { font-size:18px; transition:0.4s ease; animation: floatSkill 3s ease-in-out infinite; }
+
+@keyframes floatSkill { 0%{transform:translateY(0);}50%{transform:translateY(-4px);}100%{transform:translateY(0);} }
 
 .skill:hover { transform: translateY(-6px) scale(1.05); box-shadow:0 0 20px #0ff; }
 .skill:hover i { transform: rotate(10deg) scale(1.4); color:#fff; text-shadow:0 0 10px #0ff; }
 
 /* ================= PROJECTS ================= */
-.projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.projects { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
 
 .project-card {
-    background:#2b2b3c; padding:20px; border-radius:15px;
+    background:#2b2b3c;
+    padding:20px;
+    border-radius:15px;
     transition:0.3s, transform 0.3s, box-shadow 0.3s;
-    border-left:5px solid #0ff; opacity:0; transform:translateX(-50px);
+    border-left:5px solid #0ff;
+    opacity:0;
+    transform: translateX(-50px);
 }
-.project-card.slide-right { transform:translateX(50px); }
+
 .project-card.visible { opacity:1; transform:translateX(0); }
 .project-card:hover { box-shadow:0 10px 20px rgba(0,255,255,0.3); }
 
@@ -119,8 +137,7 @@ h3 { color:#0ff; margin-bottom:15px; }
 .project-card.lotto { border-left-color:#0ff; }
 
 .project-card h4 i { transition: transform 0.3s, color 0.3s, text-shadow 0.3s; }
-.project-card:hover h4 i { transform: scale(1.4) rotate(5deg); color:#0ff; text-shadow:0 0 8px #0ff; }
-
+.project-card:hover h4 i { transform:scale(1.4) rotate(5deg); color:#0ff; text-shadow:0 0 8px #0ff; }
 @keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);} }
 .project-card h4 i.pulse { animation:pulse 2s infinite; }
 
@@ -130,9 +147,18 @@ h3 { color:#0ff; margin-bottom:15px; }
 
 /* ================= FLOATING WHATSAPP ================= */
 .whatsapp {
-    position:fixed; bottom:20px; right:20px; background:#25D366;
-    width:60px; height:60px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-size:28px; color:white; text-decoration:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:white;
+    text-decoration:none;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
