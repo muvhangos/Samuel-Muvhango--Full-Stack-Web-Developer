@@ -1,118 +1,138 @@
-/* RESET */
-*{
+/* ================= BODY ================= */
+body {
     margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family:'Segoe UI', sans-serif;
+    background-color: #1e1e2f;
     color:#fff;
-    display:flex;
-    justify-content:center;
-    padding:40px 20px;
+    scroll-behavior:smooth;
 }
 
-.container{
-    max-width:1000px;
-    width:100%;
-}
-
-/* PROFILE */
-.profile{
+/* ================= NAVIGATION ================= */
+nav {
+    position: sticky;
+    top:0;
+    background:#12121b;
+    padding: 10px 0;
     text-align:center;
-    margin-bottom:40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    z-index:1000;
 }
 
-.profile img{
-    width:150px;
-    height:150px;
+nav a {
+    margin:0 15px;
+    text-decoration:none;
+    color:#ccc;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover { color:#0ff; }
+
+/* ================= CONTAINER ================= */
+.container { max-width:1000px; margin:40px auto; padding:20px; }
+
+/* ================= HEADER ================= */
+.header { text-align:center; margin-bottom:40px; }
+
+.profile {
+    width:150px; height:150px;
     border-radius:50%;
     object-fit:cover;
-    border:3px solid #0ff;
-    box-shadow:0 0 20px #0ff;
-    margin-bottom:15px;
+    border:4px solid #0ff;
+    animation: float 3s ease-in-out infinite;
 }
 
-.title{
-    color:#0ff;
-    font-size:18px;
-    margin-top:5px;
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-/* SECTIONS */
-section{
-    margin-bottom:40px;
+/* ================= NAME SCROLL ================= */
+.name-scroll { overflow:hidden; white-space:nowrap; width:100%; margin:15px 0 5px; }
+.name-scroll h1 {
+    display:inline-block; padding-left:100%;
+    animation: scrollName 12s linear infinite;
+    font-size:32px; color:#fff;
 }
 
-h2{
-    margin-bottom:15px;
-    color:#0ff;
+@keyframes scrollName {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
-/* SKILLS */
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
+h3 { color:#0ff; margin-bottom:15px; }
+.header p { max-width:600px; margin:0 auto; color:#ccc; }
+
+/* ================= BUTTON ================= */
+.btn {
+    display:inline-block; margin-top:15px; padding:10px 20px;
+    background:#0ff; color:#000; text-decoration:none;
+    border-radius:25px; font-weight:bold; transition:0.3s;
+}
+.btn:hover { background:#0aa; color:#fff; }
+
+/* ================= SECTIONS ================= */
+.section {
+    margin-top:50px;
+    opacity:0;
+    transform: translateY(20px);
+    transition:0.6s ease;
+}
+.section.visible { opacity:1; transform:translateY(0); }
+.section h2 { color:#0ff; margin-bottom:20px; border-bottom:2px solid #0ff; display:inline-block; }
+
+/* ================= SKILLS ================= */
+.skills-grid {
+    display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px;
 }
 
-.skill{
-    background:#1f2a40;
-    padding:10px 18px;
-    border-radius:30px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-weight:bold;
-    box-shadow:0 0 10px #0ff30f33;
-    transition:0.3s ease;
-    cursor:pointer;
+.skill {
+    background:#2b2b3c; padding:10px 15px;
+    border-radius:25px; text-align:center; color:#0ff;
+    font-weight:bold; box-shadow:0 0 10px #0ff50f55;
+    transition:0.4s ease; display:flex; align-items:center; gap:8px; position:relative; overflow:hidden;
 }
 
-.skill i{
-    animation:floatSkill 3s ease-in-out infinite;
-}
+/* Floating icon animation */
+@keyframes floatSkill {0%{transform:translateY(0);}50%{transform:translateY(-4px);}100%{transform:translateY(0);}}
+.skill i { font-size:18px; transition:0.4s ease; animation: floatSkill 3s ease-in-out infinite; }
 
-@keyframes floatSkill{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-4px);}
-    100%{transform:translateY(0);}
-}
+.skill:hover { transform: translateY(-6px) scale(1.05); box-shadow:0 0 20px #0ff; }
+.skill:hover i { transform: rotate(10deg) scale(1.4); color:#fff; text-shadow:0 0 10px #0ff; }
 
-.skill:hover{
-    transform:translateY(-5px) scale(1.05);
-    box-shadow:0 0 20px #0ff;
-}
+/* ================= PROJECTS ================= */
+.projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
 
-/* PROJECTS */
-.project{
-    background:#1f2a40;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:15px;
-    transition:0.3s;
+.project-card {
+    background:#2b2b3c; padding:20px; border-radius:15px;
+    transition:0.3s, transform 0.3s, box-shadow 0.3s;
+    border-left:5px solid #0ff; opacity:0; transform:translateX(-50px);
 }
+.project-card.slide-right { transform:translateX(50px); }
+.project-card.visible { opacity:1; transform:translateX(0); }
+.project-card:hover { box-shadow:0 10px 20px rgba(0,255,255,0.3); }
 
-.project:hover{
-    transform:scale(1.02);
-    box-shadow:0 0 15px #0ff;
-}
+.project-card.js { border-left-color:#f0db4f; }
+.project-card.python { border-left-color:#306998; }
+.project-card.react { border-left-color:#61dafb; }
+.project-card.firebase { border-left-color:#ff6f00; }
+.project-card.lotto { border-left-color:#0ff; }
 
-/* BUTTON */
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#0ff;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:30px;
-    transition:0.3s;
-}
+.project-card h4 i { transition: transform 0.3s, color 0.3s, text-shadow 0.3s; }
+.project-card:hover h4 i { transform: scale(1.4) rotate(5deg); color:#0ff; text-shadow:0 0 8px #0ff; }
 
-.btn:hover{
-    background:#fff;
-    box-shadow:0 0 20px #0ff;
+@keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);} }
+.project-card h4 i.pulse { animation:pulse 2s infinite; }
+
+/* ================= CONTACT ================= */
+.contact a { text-decoration:none; color:#0ff; font-weight:bold; }
+.contact a:hover { color:#0aa; }
+
+/* ================= FLOATING WHATSAPP ================= */
+.whatsapp {
+    position:fixed; bottom:20px; right:20px; background:#25D366;
+    width:60px; height:60px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:28px; color:white; text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
