@@ -25,25 +25,25 @@
     <!-- ABOUT -->
     <div id="about" class="header section">
         <img src="images/profile.jpeg" class="profile">
-        <div class="name-scroll">
-            <h1>Samuel Muvhango</h1>
-        </div>
+        <h1 class="typed-name">Samuel Muvhango</h1>
         <h3>Full-Stack Web Developer</h3>
         <p>
             I am passionate about programming and full-stack development, constantly exploring technologies like Node.js, React, Django, HTMX, and MERN stack.
         </p>
-       <a href="cv/Samuel_Muvhango_CV.pdf" download="Samuel_Muvhango_CV.pdf" class="btn">Download My CV</a>
+        <a href="cv/Samuel_Muvhango_CV.pdf" download="Samuel_Muvhango_CV.pdf" class="btn">Download My CV</a>
     </div>
 
     <!-- EXPERIENCE -->
     <div id="experience" class="section">
         <h2>Experience</h2>
-         <p><strong>Innovation Group UK – Admin Tech</strong></p>
-        <p>Administrator, Developer, Programmer and Database administrator. Creating scripts, adding and updating UK AWS server.</p>
+        <p><strong>Innovation Group UK – Admin Tech</strong></p>
+        <p>Administrator, Developer, Programmer and Database Administrator. Created Scripts and Managed UK AWS server.</p>
+
         <p><strong>Gijima Technologies – Field Service Engineer</strong></p>
         <p>Linux configuration, POS installations, ATM & network support.</p>
+
         <p><strong>Dimension Data – AD & Messaging Engineer</strong></p>
-        <p>Mobile Device Management, manage and support user’s mobile devices using Airwatch (CloudWatch) console, supporting Active Directory, Exchange Server, Lync, and Teams Server administration.</p>
+        <p>Mobile Device Management, support via Airwatch (CloudWatch), Active Directory, Exchange, Lync, and Teams administration.</p>
     </div>
 
     <!-- PROJECTS -->
@@ -51,49 +51,49 @@
         <h2>Projects</h2>
         <div class="projects">
 
-            <div class="project-card js slide-right">
+            <div class="project-card js">
                 <h4>Joke Generator App <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
                 <p>Generate random jokes with a fun UI. Built with JavaScript.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card python slide-right">
+            <div class="project-card python">
                 <h4>School Registration Form <i class="fab fa-python pulse" style="color:#306998;"></i></h4>
                 <p>Django + HTMX CRUD admission system.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card js slide-right">
+            <div class="project-card js">
                 <h4>Shopping Cart <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
                 <p>E-commerce shopping cart implementation with product management.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card js slide-right">
+            <div class="project-card js">
                 <h4>Guessing Game <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
                 <p>Interactive number guessing game built with JavaScript.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card react slide-right">
+            <div class="project-card react">
                 <h4>Weather Predictive App <i class="fab fa-react pulse" style="color:#61dafb;"></i></h4>
                 <p>Check weather forecasts using API integration (OpenWeatherMap).</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card react slide-right">
+            <div class="project-card react">
                 <h4>Greeting App <i class="fab fa-react pulse" style="color:#61dafb;"></i></h4>
                 <p>Interactive web app to send and display greetings with animations.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card firebase slide-right">
+            <div class="project-card firebase">
                 <h4>Firebase Project <i class="fas fa-fire pulse" style="color:#ff6f00;"></i></h4>
                 <p>Cloud-based app leveraging Firebase for authentication and database.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
             </div>
 
-            <div class="project-card lotto slide-right">
+            <div class="project-card lotto">
                 <h4>Lottery Analyzer <i class="fas fa-chart-line pulse" style="color:#0ff;"></i></h4>
                 <p>Smart lotto analytics tool for trends and number prediction.</p>
                 <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
@@ -131,8 +131,7 @@
         <p>Email: muvhangos@gmail.com</p>
         <p>
             <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
-            <a href="https://wa.me/27724955002?text=Hello%20Samuel%20I%20viewed%20your%20portfolio"
-               target="_blank">+27 72 495 5002</a>
+            <a href="https://wa.me/27724955002" target="_blank">+27 72 495 5002</a>
         </p>
     </div>
 
@@ -151,7 +150,6 @@ const projectCards = document.querySelectorAll(".project-card");
 window.addEventListener("scroll", () => {
     const triggerBottom = window.innerHeight - 100;
 
-    // Sections fade in
     sections.forEach(section => {
         const top = section.getBoundingClientRect().top;
         if(top < triggerBottom){
@@ -159,16 +157,10 @@ window.addEventListener("scroll", () => {
         }
     });
 
-    // Project cards slide in
     projectCards.forEach((card, index) => {
         const top = card.getBoundingClientRect().top;
         if(top < triggerBottom){
             card.classList.add("visible");
-            if(index % 2 === 0){
-                card.classList.remove("slide-right");
-            } else {
-                card.classList.add("slide-right");
-            }
         }
     });
 });
