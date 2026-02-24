@@ -14,7 +14,49 @@
 
 .mern-badge .mern-icons img {
   width: 22px;
-  height: 22px;
+  height: 22.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.skill img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  background: #1a1a1a;
+}
+
+/* MERN Badge Styling */
+.mern-badge .mern-icons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.mern-badge .mern-icons img {
+  width: 20px;
+  height: 20px;
+  transition: 0.3s ease;
+}
+
+.mern-badge:hover .mern-icons img {
+  transform: scale(1.15) rotate(6deg);
+}px;
   transition: transform 0.3s ease;
 }
 
