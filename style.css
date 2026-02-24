@@ -1,9 +1,15 @@
 /* MERN BADGE */
+.mern-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .mern-badge .mern-icons {
   display: flex;
   gap: 6px;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 6px;
 }
 
 .mern-badge .mern-icons img {
@@ -12,7 +18,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Hover animation */
+/* Hover Animation */
 .mern-badge:hover .mern-icons img {
-  transform: scale(1.2) rotate(8deg);
+  transform: scale(1.15) rotate(6deg);
 }
