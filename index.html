@@ -16,86 +16,85 @@
 
 <style>
 /* RESET */
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{font-family:Arial, sans-serif;background:#0f0f0f;color:#fff;transition:0.4s;}
-body.light{background:#f5f5f5;color:#111;}
+* {margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body {font-family:Arial, sans-serif;background:#0f0f0f;color:#fff;transition:0.4s;}
+body.light {background:#f5f5f5;color:#111;}
 
 /* PROGRESS BAR */
-.progress-bar{position:fixed;top:0;left:0;height:5px;background:#00ffff;width:0%;z-index:2000;}
+.progress-bar {position:fixed;top:0;left:0;height:5px;background:#00ffff;width:0%;z-index:2000;}
 
 /* NAV */
-nav{background:#000;padding:15px;text-align:center;position:sticky;top:0;z-index:1000;}
-nav a{color:#00ffff;margin:0 15px;text-decoration:none;font-weight:bold;}
-nav a:hover{color:#ff9800;}
-
-/* TOGGLE */
-.toggle{position:fixed;right:20px;top:15px;background:#00ffff;color:#000;border:none;padding:8px 15px;border-radius:20px;cursor:pointer;font-weight:bold;z-index:2001;}
+nav {background:#000;padding:15px;text-align:center;position:sticky;top:0;z-index:1000;}
+nav a {color:#00ffff;margin:0 15px;text-decoration:none;font-weight:bold;}
+nav a:hover {color:#ff9800;}
+.toggle {position:fixed;right:20px;top:15px;background:#00ffff;color:#000;border:none;padding:8px 15px;border-radius:20px;cursor:pointer;font-weight:bold;z-index:2001;}
 
 /* SECTIONS */
-.section{padding:80px 20px;max-width:1100px;margin:auto;opacity:0;transform:translateY(40px);transition:1s;}
-.section.show{opacity:1;transform:translateY(0);}
-h2{text-align:center;margin-bottom:40px;color:#00ffff;}
+.section {padding:80px 20px;max-width:1100px;margin:auto;opacity:0;transform:translateY(40px);transition:1s;}
+.section.show {opacity:1;transform:translateY(0);}
+h2 {text-align:center;margin-bottom:40px;color:#00ffff;}
 
-/* HEADER */
-.header{text-align:center;}
-.profile{width:160px;border-radius:50%;border:3px solid #00ffff;margin-bottom:20px;}
-.btn{display:inline-block;margin-top:20px;padding:10px 25px;background:#00ffff;color:#000;text-decoration:none;border-radius:25px;font-weight:bold;transition:0.3s;}
-.btn:hover{background:#ff9800;color:#fff;transform:scale(1.05);}
+/* ABOUT */
+.header {text-align:center;}
+.profile {width:160px;border-radius:50%;border:3px solid #00ffff;margin-bottom:20px;}
 
-/* TYPING EFFECT */
-@keyframes blink{0%,50%,100%{border-color:transparent;}25%,75%{border-color:#00ffff;}}
-.typed{display:inline;border-right:2px solid #00ffff;white-space:nowrap;overflow:hidden;animation:blink 1s infinite;}
+/* TYPING ANIMATION */
+@keyframes blink {0%,50%,100% {border-color:transparent;}25%,75% {border-color:#00ffff;}}
+.typed {display:inline-block;border-right:2px solid #00ffff;white-space:nowrap;overflow:hidden;animation:blink 0.8s infinite;}
+
+/* BUTTONS */
+.btn {display:inline-block;margin-top:20px;padding:10px 25px;background:#00ffff;color:#000;text-decoration:none;border-radius:25px;font-weight:bold;transition:0.3s;}
+.btn:hover {background:#ff9800;color:#fff;transform:scale(1.05);}
 
 /* PROJECTS */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
-.project-card{background:#111;padding:25px;border-radius:15px;text-align:center;border:1px solid #222;transition:transform 0.3s,box-shadow 0.3s,background 0.3s;}
-body.light .project-card{background:#fff;border:1px solid #ddd;}
-.project-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 15px 30px rgba(0,255,255,0.4);}
-.project-card img{transition:transform 0.3s;}
-.project-card:hover img{transform:scale(1.2) rotate(3deg);}
+.projects {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.project-card {background:#111;padding:25px;border-radius:15px;border:1px solid #222;transition:transform 0.3s,box-shadow 0.3s,background 0.3s;}
+body.light .project-card {background:#fff;border:1px solid #ddd;}
+.project-card:hover {transform:translateY(-10px) scale(1.03);box-shadow:0 15px 30px rgba(0,255,255,0.4);}
 
-/* SKILLS GRID */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;justify-items:center;align-items:center;}
-.skill{background:#111;padding:20px;border-radius:12px;text-align:center;width:100%;max-width:150px;cursor:default;display:flex;flex-direction:column;align-items:center;gap:8px;transition:transform 0.3s,box-shadow 0.3s,background 0.3s;}
-.skill img, .skill i{font-size:40px;color:#00ffff;transition:transform 0.3s,color 0.3s;}
-.skill span{display:block;font-weight:bold;margin-top:8px;color:#fff;transition:color 0.3s;}
-body.light .skill{background:#fff;}
-body.light .skill span{color:#111;}
-.skill:hover{transform:scale(1.1);background:#00ffff;color:#000;box-shadow:0 10px 25px rgba(0,255,255,0.3);}
-.skill:hover img, .skill:hover i{transform:scale(1.2) rotate(5deg);color:#000;}
-.skill:hover span{color:#000;}
+/* SKILLS */
+.skills-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;justify-items:center;align-items:center;}
+.skill {background:#111;padding:20px;border-radius:12px;text-align:center;width:100%;max-width:150px;cursor:default;display:flex;flex-direction:column;align-items:center;gap:8px;transition:transform 0.3s,box-shadow 0.3s,background 0.3s;}
+.skill img, .skill i {font-size:35px;color:#00ffff;transition:transform 0.3s,color 0.3s;}
+.skill span {display:block;font-weight:bold;margin-top:8px;color:#fff;transition:color 0.3s;}
+body.light .skill {background:#fff;}
+body.light .skill span {color:#111;}
+.skill:hover {transform:scale(1.1);background:#00ffff;color:#000;box-shadow:0 10px 25px rgba(0,255,255,0.3);}
+.skill:hover img, .skill:hover i {transform:scale(1.2) rotate(5deg);color:#000;}
+.skill:hover span {color:#000;}
 
 /* CERTIFICATIONS */
-.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
-.cert-card{background:#111;padding:25px;border-radius:15px;text-align:center;transition:0.4s;border:1px solid #222;}
-body.light .cert-card{background:#fff;border:1px solid #ddd;}
-.cert-card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(0,255,255,0.3);}
-.cert-icon{font-size:40px;margin-bottom:15px;color:#00ffff;}
+.cert-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.cert-card {background:#111;padding:25px;border-radius:15px;text-align:center;transition:0.4s;border:1px solid #222;}
+body.light .cert-card {background:#fff;border:1px solid #ddd;}
+.cert-card:hover {transform:translateY(-10px);box-shadow:0 10px 25px rgba(0,255,255,0.3);}
+.cert-icon {font-size:40px;margin-bottom:15px;color:#00ffff;}
 
-/* HIRE ME */
-.hire-card{max-width:500px;margin:20px auto;padding:25px;background:#111;border-radius:15px;box-shadow:0 10px 25px rgba(0,255,255,0.3);transition:0.3s;}
-body.light .hire-card{background:#fff;box-shadow:0 10px 25px rgba(0,0,0,0.15);}
-.hire-card:hover{transform:translateY(-5px);}
-.hire-form input,.hire-form textarea{padding:12px;width:100%;margin:10px 0;border-radius:10px;border:1px solid #00ffff;background:#111;color:#fff;transition:0.3s;}
-body.light .hire-form input, body.light .hire-form textarea{background:#f5f5f5;color:#111;border:1px solid #00ffff;}
-.hire-form input:focus,.hire-form textarea:focus{outline:none;border-color:#ff9800;}
-.hire-form button{margin-top:10px;width:100%;padding:12px;background:#00ffff;color:#000;border:none;border-radius:25px;font-weight:bold;cursor:pointer;transition:0.3s;}
-.hire-form button:hover{background:#ff9800;color:#fff;transform:scale(1.05);}
+/* CONTACT / HIRE ME */
+.contact, .hire-card {text-align:center;}
+.hire-card {max-width:500px;margin:20px auto;padding:25px;background:#111;border-radius:15px;box-shadow:0 10px 25px rgba(0,255,255,0.3);transition:0.3s;}
+body.light .hire-card {background:#fff;box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+.hire-card:hover {transform:translateY(-5px);}
+.hire-form input, .hire-form textarea {padding:12px;width:100%;margin:10px 0;border-radius:10px;border:1px solid #00ffff;background:#111;color:#fff;transition:0.3s;}
+body.light .hire-form input, body.light .hire-form textarea {background:#f5f5f5;color:#111;border:1px solid #00ffff;}
+.hire-form input:focus, .hire-form textarea:focus {outline:none;border-color:#ff9800;}
+.hire-form button {margin-top:10px;width:100%;padding:12px;background:#00ffff;color:#000;border:none;border-radius:25px;font-weight:bold;cursor:pointer;transition:0.3s;}
+.hire-form button:hover {background:#ff9800;color:#fff;transform:scale(1.05);}
 
 /* WHATSAPP */
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:25px;z-index:2000;}
+.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:25px;z-index:2000;}
 
 /* FOOTER */
-footer{text-align:center;padding:20px;background:#000;margin-top:50px;font-size:14px;}
+footer {text-align:center;padding:20px;background:#000;margin-top:50px;font-size:14px;}
 
 /* RESPONSIVE */
-@media(max-width:768px){nav a{display:block;margin:10px 0;}}
-@media(max-width:900px){.projects{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}}
-@media(max-width:900px){.skills-grid{grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:15px;}}
-@media(max-width:900px){.cert-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}}
-@media(max-width:480px){.profile{width:120px;border:2px solid #00ffff;}}
-@media(max-width:600px){.hire-card{padding:20px;margin:15px;}.hire-form button{padding:10px;}}
-@media(max-width:480px){footer{font-size:12px;padding:15px;}}
+@media (max-width:768px){nav a{display:block;margin:10px 0;}}
+@media (max-width:900px){.projects{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}}
+@media (max-width:900px){.skills-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px;}}
+@media (max-width:900px){.cert-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}}
+@media (max-width:480px){.profile{width:120px;border:2px solid #00ffff;}}
+@media (max-width:600px){.hire-card{padding:20px;margin:15px;}.hire-form button{padding:10px;}}
+@media (max-width:480px){footer{font-size:12px;padding:15px;}}
 </style>
 </head>
 <body>
@@ -116,7 +115,7 @@ footer{text-align:center;padding:20px;background:#000;margin-top:50px;font-size:
 <!-- ABOUT -->
 <div id="about" class="section header">
 <img src="images/profile.jpeg" class="profile">
-<h1 class="typed" id="typed-text"></h1>
+<h1 id="typed-text" class="typed"></h1>
 </div>
 
 <!-- EXPERIENCE -->
@@ -134,28 +133,30 @@ footer{text-align:center;padding:20px;background:#000;margin-top:50px;font-size:
 <div class="project-card"><h3>Joke App</h3><p>JavaScript joke generator.</p></div>
 <div class="project-card"><h3>School System</h3><p>Django + HTMX CRUD.</p></div>
 <div class="project-card"><h3>Lottery Analyzer</h3><p>Smart lotto prediction tool.</p></div>
+<div class="project-card"><h3>Jokeroo</h3><p>Unique joke app with AI integration.</p></div>
+<div class="project-card"><h3>Regentra Global ERP</h3><p>Complete school ERP system.</p></div>
 </div>
 </div>
 
-<!-- TECHNICAL SKILLS -->
+<!-- SKILLS -->
 <div id="skills" class="section">
 <h2>Technical Skills</h2>
 <div class="skills-grid">
-<div class="skill"><i class="fab fa-html5 skill-icon"></i><span>HTML</span></div>
-<div class="skill"><i class="fab fa-css3-alt skill-icon"></i><span>CSS</span></div>
-<div class="skill"><i class="fab fa-js skill-icon"></i><span>JavaScript</span></div>
-<div class="skill"><i class="fab fa-react skill-icon"></i><span>React</span></div>
+<div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
+<div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+<div class="skill"><i class="fab fa-js"></i><span>JavaScript</span></div>
+<div class="skill"><i class="fab fa-react"></i><span>React</span></div>
 <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
 <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
 <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg" alt="Django"><span>Django</span></div>
 <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
-<div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
-<div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure"><span>Azure</span></div>
 <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" alt="NPM"><span>NPM</span></div>
+<div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure"><span>Azure</span></div>
+<div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap"><span>Bootstrap</span></div>
 <div class="skill"><span>REST API</span></div>
-<div class="skill"><span>JWT Auth</span></div>
-<div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/aws/aws-original.svg" alt="AWS"><span>AWS</span></div>
-<div class="skill"><span>MERN Stack</span></div>
+<div class="skill"><span>JWT Authentication</span></div>
+<div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mern/mern-original.svg" alt="MERN"><span>MERN Stack</span></div>
+<div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/aws/aws-plain.svg" alt="AWS"><span>AWS</span></div>
 <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/htmx/htmx-original.svg" alt="HTMX"><span>HTMX</span></div>
 </div>
 </div>
@@ -184,41 +185,66 @@ footer{text-align:center;padding:20px;background:#000;margin-top:50px;font-size:
 <h2>Hire Me</h2>
 <p>If you want to work with me, send a message below:</p>
 <div class="hire-card">
-<form id="hireForm" class="hire-form">
-<input type="text" name="user_name" placeholder="Your Name" required>
-<input type="email" name="user_email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-<button type="submit" class="btn">Send Message</button>
-</form>
-<p id="formStatus" style="margin-top:10px;"></p>
+  <form id="hireForm" class="hire-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <p id="formStatus" style="margin-top:10px;"></p>
 </div>
 <p style="margin-top:15px;">Or send a WhatsApp message directly:</p>
 <a href="https://wa.me/27724955002?text=Hello%20Samuel,%20I%20want%20to%20hire%20you" target="_blank" class="btn" style="background:#25D366;color:#fff;margin-top:10px;">Message on WhatsApp</a>
 </div>
 
 <a href="https://wa.me/27724955002" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
 <footer>© 2026 Samuel Muvhango | Elite Portfolio</footer>
 
 <script>
 // Scroll animation & progress
 const sections=document.querySelectorAll(".section");
-window.addEventListener("scroll",()=>{sections.forEach(sec=>{if(sec.getBoundingClientRect().top<window.innerHeight-100){sec.classList.add("show");}});let scrollTop=document.documentElement.scrollTop;let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;let progress=(scrollTop/height)*100;document.getElementById("progressBar").style.width=progress+"%";});
+window.addEventListener("scroll",()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top<window.innerHeight-100){sec.classList.add("show");}
+  });
+  let scrollTop=document.documentElement.scrollTop;
+  let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById("progressBar").style.width=(scrollTop/height)*100+"%";
+});
 
 // Dark/Light Toggle
 function toggleMode(){document.body.classList.toggle("light");}
 
-// Smooth scroll for nav links
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}});});
+// Smooth scroll
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',function(e){
+    e.preventDefault();
+    const target=document.querySelector(this.getAttribute('href'));
+    if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
 
-// Typing animation
-const typedText=document.getElementById('typed-text');
-const textLines=["Samuel Muvhango","Full-Stack Developer","Passionate about building scalable applications using modern technologies."];
-let line=0, char=0;
-function type(){if(line<textLines.length){if(char<textLines[line].length){typedText.innerHTML=textLines[line].substring(0,char+1)+'<span class="typed"></span>';char++;setTimeout(type,70);}else{typedText.innerHTML=textLines[line];line++;char=0;setTimeout(type,500);}}}
-type();
+// Typing Animation
+const typedText = document.getElementById('typed-text');
+const textLines = [
+  "Samuel Muvhango",
+  "Full-Stack Developer",
+  "Passionate about building scalable applications using modern technologies."
+];
+let line=0,char=0;
+function typeLine(){
+  if(line<textLines.length){
+    typedText.innerHTML=textLines[line].substring(0,char+1)+'<span class="typed"></span>';
+    char++;
+    if(char<textLines[line].length){setTimeout(typeLine,70);}
+    else{char=0;line++;setTimeout(typeLine,500);}
+  }
+}
+typeLine();
 
 // EmailJS form submission
-document.getElementById('hireForm').addEventListener('submit', function(event){
+document.getElementById('hireForm').addEventListener('submit',function(event){
   event.preventDefault();
   const form=this;
   const status=document.getElementById('formStatus');
