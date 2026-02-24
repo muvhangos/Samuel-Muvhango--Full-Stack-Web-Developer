@@ -6,8 +6,145 @@
 <title>Samuel Muvhango | Full-Stack Web Developer</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
 
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00ffff;
+}
+
+/* ABOUT */
+.header {
+    text-align: center;
+}
+
+.profile {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00ffff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,255,255,0.3);
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #222;
+}
+
+.skill i {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #00ffff;
+    display: block;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #ff9800;
+}
+
+</style>
 </head>
 <body>
 
@@ -20,163 +157,131 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<div class="container">
-
-    <!-- ABOUT -->
-    <div id="about" class="header section">
-        <img src="images/profile.jpeg" class="profile" alt="Samuel Muvhango"
-             onerror="this.src='https://www.w3schools.com/howto/img_avatar.png'">
-        <h1 class="typewriter">Samuel Muvhango</h1>
-        <h3>Full-Stack Web Developer</h3>
-        <p>
-            I am passionate about programming and full-stack development, constantly exploring technologies like Node.js, React, Django, HTMX, and MERN stack.
-        </p>
-     <a href="./cv/Samuel_Muvhango_CV.pdf" class="btn" target="_blank" download>Download My CV</a>
-    </div>
-
-    <!-- EXPERIENCE -->
-    <div id="experience" class="section">
-        <h2>Experience</h2>
-        <p><strong>Innovation Group UK – Admin Tech</strong></p>
-        <p>Administrator, Developer, Programmer and Database Administrator, Creating Scripts, Adding and Updating UK AWS server.</p>
-
-        <p><strong>Gijima Technologies – Field Service Engineer</strong></p>
-        <p>Linux configuration, POS installations, ATM & network support.</p>
-
-        <p><strong>Dimension Data – AD & Messaging Engineer</strong></p>
-        <p>Mobile Device Management, support for user devices using Airwatch, Active Directory, Exchange, Lync, and Teams Server administration.</p>
-    </div>
-
-    <!-- PROJECTS -->
-    <div id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects">
-
-            <div class="project-card js slide-right">
-                <h4>Joke Generator App <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
-                <p>Generate random jokes with a fun UI. Built with JavaScript.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card python slide-right">
-                <h4>School Registration Form <i class="fab fa-python pulse" style="color:#306998;"></i></h4>
-                <p>Django + HTMX CRUD admission system.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card js slide-right">
-                <h4>Shopping Cart <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
-                <p>E-commerce shopping cart implementation with product management.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card js slide-right">
-                <h4>Guessing Game <i class="fab fa-js-square pulse" style="color:#f0db4f;"></i></h4>
-                <p>Interactive number guessing game built with JavaScript.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card react slide-right">
-                <h4>Weather Predictive App <i class="fab fa-react pulse" style="color:#61dafb;"></i></h4>
-                <p>Check weather forecasts using API integration (OpenWeatherMap).</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card react slide-right">
-                <h4>Greeting App <i class="fab fa-react pulse" style="color:#61dafb;"></i></h4>
-                <p>Interactive web app to send and display greetings with animations.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card firebase slide-right">
-                <h4>Firebase Project <i class="fas fa-fire pulse" style="color:#ff6f00;"></i></h4>
-                <p>Cloud-based app leveraging Firebase for authentication and database.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-            <div class="project-card lotto slide-right">
-                <h4>Lottery Analyzer <i class="fas fa-chart-line pulse" style="color:#0ff;"></i></h4>
-                <p>Smart lotto analytics tool for trends and number prediction.</p>
-                <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div id="skills" class="section">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill"><i class="fab fa-html5"></i> HTML</div>
-            <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-            <div class="skill"><i class="fas fa-project-diagram"></i> HTMX</div>
-            <div class="skill"><i class="fab fa-react"></i> React</div>
-            <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="skill"><i class="fab fa-python"></i> Python</div>
-            <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
-            <div class="skill"><i class="fas fa-layer-group"></i> MERN Stack</div>
-            <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
-            <div class="skill"><i class="fab fa-aws"></i> AWS</div>
-            <div class="skill"><i class="fab fa-microsoft"></i> Azure</div>
-            <div class="skill"><i class="fas fa-network-wired"></i> REST APIs</div>
-            <div class="skill"><i class="fas fa-lock"></i> JWT Authentication</div>
-            <div class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</div>
-            <div class="skill"><i class="fas fa-code"></i> Frontend & Backend</div>
-            <div class="skill"><i class="fab fa-github"></i> GitHub</div>
-        </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="section contact">
-        <h2>Contact</h2>
-        <p>Email: muvhangos@gmail.com</p>
-        <p>
-            <a href="https://wa.me/27724955002" target="_blank">
-                <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> +27 72 495 5002
-            </a>
-        </p>
-    </div>
-
+<!-- ABOUT -->
+<div id="about" class="section header">
+    <img src="images/profile.jpeg" class="profile" alt="Samuel Muvhango">
+    <h1>Samuel Muvhango</h1>
+    <h3>Full-Stack Web Developer</h3>
+    <p>
+        I am passionate about programming and full-stack development, 
+        constantly exploring technologies like Node.js, React, Django, HTMX, and MERN stack.
+    </p>
+    <a href="./cv/Samuel_Muvhango_CV.pdf" class="btn" target="_blank">Download My CV</a>
 </div>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/27724955002?text=Hello%20Samuel%20I%20viewed%20your%20portfolio" class="whatsapp" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
+<!-- EXPERIENCE -->
+<div id="experience" class="section">
+    <h2>Experience</h2>
 
-<script>
-// Fade-in + Slide-in Animation
-const sections = document.querySelectorAll(".section");
-const projectCards = document.querySelectorAll(".project-card");
+    <h3>Innovation Group UK – Admin Tech</h3>
+    <p>
+        Administrator, Developer, Programmer and Database Administrator. 
+        Creating scripts and managing UK AWS servers.
+    </p>
 
-window.addEventListener("scroll", () => {
-    const triggerBottom = window.innerHeight - 100;
+    <h3>Gijima Technologies – Field Service Engineer</h3>
+    <p>
+        Linux configuration, POS installations, ATM & network support.
+    </p>
 
-    sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if(top < triggerBottom){
-            section.classList.add("visible");
-        }
-    });
+    <h3>Dimension Data – AD & Messaging Engineer</h3>
+    <p>
+        Mobile Device Management, Airwatch, Active Directory, 
+        Exchange, Lync, and Teams Server administration.
+    </p>
+</div>
 
-    projectCards.forEach((card, index) => {
-        const top = card.getBoundingClientRect().top;
-        if(top < triggerBottom){
-            card.classList.add("visible");
-            if(index % 2 === 0){
-                card.classList.remove("slide-right");
-            } else {
-                card.classList.add("slide-right");
-            }
-        }
-    });
-});
-</script>
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>Joke Generator App</h3>
+            <p>Generate random jokes with a fun UI. Built with JavaScript.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>School Registration Form</h3>
+            <p>Django + HTMX CRUD admission system.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Shopping Cart</h3>
+            <p>E-commerce shopping cart implementation.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Guessing Game</h3>
+            <p>Interactive number guessing game in JavaScript.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Weather Predictive App</h3>
+            <p>Weather forecasts using API integration.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Greeting App</h3>
+            <p>Interactive greeting web app with animations.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Firebase Project</h3>
+            <p>Cloud-based app using Firebase authentication.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Lottery Analyzer</h3>
+            <p>Smart lotto analytics tool for trends & prediction.</p>
+            <a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill"><i class="fab fa-html5"></i>HTML</div>
+        <div class="skill"><i class="fab fa-css3-alt"></i>CSS</div>
+        <div class="skill"><i class="fas fa-project-diagram"></i>HTMX</div>
+        <div class="skill"><i class="fab fa-react"></i>React</div>
+        <div class="skill"><i class="fab fa-node-js"></i>Node.js</div>
+        <div class="skill"><i class="fab fa-python"></i>Python</div>
+        <div class="skill"><i class="fas fa-database"></i>MongoDB</div>
+        <div class="skill"><i class="fas fa-layer-group"></i>MERN Stack</div>
+        <div class="skill"><i class="fab fa-js-square"></i>JavaScript</div>
+        <div class="skill"><i class="fab fa-aws"></i>AWS</div>
+        <div class="skill"><i class="fab fa-microsoft"></i>Azure</div>
+        <div class="skill"><i class="fas fa-network-wired"></i>REST APIs</div>
+        <div class="skill"><i class="fas fa-lock"></i>JWT Authentication</div>
+        <div class="skill"><i class="fab fa-bootstrap"></i>Bootstrap</div>
+        <div class="skill"><i class="fas fa-code"></i>Frontend & Backend</div>
+        <div class="skill"><i class="fab fa-github"></i>GitHub</div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Email: muvhangos@gmail.com</p>
+    <p>
+        <a href="https://wa.me/27724955002" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> +27 72 495 5002
+        </a>
+    </p>
+</div>
 
 </body>
 </html>
-
-
-
-
-
