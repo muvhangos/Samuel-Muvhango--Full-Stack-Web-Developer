@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samuel Muvhango | Full-Stack Web Developer</title>
+<title>Samuel Muvhango | Full-Stack Developer</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -19,9 +19,26 @@ scroll-behavior:smooth;
 
 body{
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#0f0f0f,#111827);
+background:#0f0f0f;
 color:#fff;
-line-height:1.6;
+transition:0.4s;
+}
+
+/* LIGHT MODE */
+body.light{
+background:#f5f5f5;
+color:#111;
+}
+
+/* SCROLL PROGRESS */
+.progress-bar{
+position:fixed;
+top:0;
+left:0;
+height:5px;
+background:#00ffff;
+width:0%;
+z-index:2000;
 }
 
 /* NAV */
@@ -39,11 +56,25 @@ color:#00ffff;
 margin:0 15px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
 
 nav a:hover{
 color:#ff9800;
+}
+
+/* TOGGLE BUTTON */
+.toggle{
+position:fixed;
+right:20px;
+top:15px;
+background:#00ffff;
+color:#000;
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
+z-index:2001;
 }
 
 /* SECTIONS */
@@ -53,7 +84,7 @@ max-width:1100px;
 margin:auto;
 opacity:0;
 transform:translateY(40px);
-transition:1s ease;
+transition:1s;
 }
 
 .section.show{
@@ -75,26 +106,8 @@ text-align:center;
 .profile{
 width:160px;
 border-radius:50%;
-margin-bottom:20px;
 border:3px solid #00ffff;
-}
-
-.typewriter{
-overflow:hidden;
-border-right:3px solid #00ffff;
-white-space:nowrap;
-animation:typing 3s steps(30,end),blink .8s infinite;
-width:fit-content;
-margin:auto;
-}
-
-@keyframes typing{
-from{width:0}
-to{width:100%}
-}
-
-@keyframes blink{
-50%{border-color:transparent}
+margin-bottom:20px;
 }
 
 .btn{
@@ -130,6 +143,11 @@ border:1px solid #222;
 transition:0.4s;
 }
 
+body.light .project-card{
+background:#fff;
+border:1px solid #ddd;
+}
+
 .project-card:hover{
 transform:translateY(-10px);
 box-shadow:0 10px 25px rgba(0,255,255,0.3);
@@ -147,8 +165,11 @@ background:#111;
 padding:20px;
 border-radius:12px;
 text-align:center;
-border:1px solid #222;
 transition:0.3s;
+}
+
+body.light .skill{
+background:#fff;
 }
 
 .skill:hover{
@@ -157,10 +178,36 @@ color:#000;
 transform:scale(1.05);
 }
 
-.skill i{
-font-size:30px;
-margin-bottom:10px;
-display:block;
+/* CERTIFICATIONS */
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.cert-card{
+background:#111;
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:0.4s;
+border:1px solid #222;
+}
+
+body.light .cert-card{
+background:#fff;
+border:1px solid #ddd;
+}
+
+.cert-card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,255,255,0.3);
+}
+
+.cert-icon{
+font-size:40px;
+margin-bottom:15px;
+color:#00ffff;
 }
 
 /* CONTACT */
@@ -168,13 +215,17 @@ display:block;
 text-align:center;
 }
 
-.contact a{
-color:#00ffff;
-text-decoration:none;
-}
-
-.contact a:hover{
-color:#ff9800;
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+z-index:2000;
 }
 
 /* FOOTER */
@@ -184,78 +235,54 @@ padding:20px;
 background:#000;
 margin-top:50px;
 font-size:14px;
-color:#aaa;
 }
 
 </style>
 </head>
 <body>
 
+<div class="progress-bar" id="progressBar"></div>
+<button class="toggle" onclick="toggleMode()">Toggle Mode</button>
+
 <nav>
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <!-- ABOUT -->
 <div id="about" class="section header">
-<img src="images/profile.jpeg" class="profile" alt="Samuel Muvhango">
-<h1 class="typewriter">Samuel Muvhango</h1>
-<h3>Full-Stack Web Developer</h3>
-<p>
-Passionate about full-stack development, building scalable applications 
-using Node.js, React, Django, HTMX and MERN stack.
-</p>
-<a href="./cv/Samuel_Muvhango_CV.pdf" class="btn" target="_blank">Download My CV</a>
+<img src="images/profile.jpeg" class="profile">
+<h1>Samuel Muvhango</h1>
+<h3>Full-Stack Developer</h3>
+<p>Passionate about building scalable applications using modern technologies.</p>
+<a href="./cv/Samuel_Muvhango_CV.pdf" class="btn" target="_blank">Download CV</a>
 </div>
 
 <!-- EXPERIENCE -->
 <div id="experience" class="section">
 <h2>Experience</h2>
-
-<h3>Innovation Group UK – Admin Tech</h3>
-<p>Administrator, Developer & Database Administrator. Managing UK AWS servers and automation scripts.</p>
-
-<h3>Gijima Technologies – Field Service Engineer</h3>
-<p>Linux configuration, POS installations, ATM & network support.</p>
-
-<h3>Dimension Data – AD & Messaging Engineer</h3>
-<p>Mobile Device Management, Active Directory, Exchange & Teams administration.</p>
+<p><strong>Innovation Group UK</strong> – Admin Tech</p>
+<p><strong>Gijima Technologies</strong> – Field Service Engineer</p>
+<p><strong>Dimension Data</strong> – AD & Messaging Engineer</p>
 </div>
 
 <!-- PROJECTS -->
 <div id="projects" class="section">
 <h2>Projects</h2>
-
 <div class="projects">
-
-<div class="project-card">
-<h3>Joke Generator App</h3>
-<p>Fun random joke generator using JavaScript.</p>
-<a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-</div>
-
-<div class="project-card">
-<h3>School Registration System</h3>
-<p>Django + HTMX full CRUD admission platform.</p>
-<a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-</div>
-
-<div class="project-card">
-<h3>Lottery Analyzer</h3>
-<p>Smart lotto trend analytics tool.</p>
-<a href="https://github.com/muvhangos" target="_blank" class="btn">View Code</a>
-</div>
-
+<div class="project-card"><h3>Joke App</h3><p>JavaScript joke generator.</p></div>
+<div class="project-card"><h3>School System</h3><p>Django + HTMX CRUD.</p></div>
+<div class="project-card"><h3>Lottery Analyzer</h3><p>Smart lotto prediction tool.</p></div>
 </div>
 </div>
 
 <!-- SKILLS -->
 <div id="skills" class="section">
 <h2>Technical Skills</h2>
-
 <div class="skills-grid">
 <div class="skill"><i class="fab fa-html5"></i>HTML</div>
 <div class="skill"><i class="fab fa-css3-alt"></i>CSS</div>
@@ -263,9 +290,18 @@ using Node.js, React, Django, HTMX and MERN stack.
 <div class="skill"><i class="fab fa-react"></i>React</div>
 <div class="skill"><i class="fab fa-node-js"></i>Node.js</div>
 <div class="skill"><i class="fab fa-python"></i>Python</div>
-<div class="skill"><i class="fab fa-aws"></i>AWS</div>
-<div class="skill"><i class="fas fa-database"></i>MongoDB</div>
-<div class="skill"><i class="fab fa-github"></i>GitHub</div>
+</div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div id="certifications" class="section">
+<h2>Certifications</h2>
+<div class="cert-grid">
+<div class="cert-card"><i class="fas fa-network-wired cert-icon"></i><h3>CompTIA Network+</h3></div>
+<div class="cert-card"><i class="fas fa-tools cert-icon"></i><h3>CompTIA A+</h3></div>
+<div class="cert-card"><i class="fab fa-microsoft cert-icon"></i><h3>MCSE</h3></div>
+<div class="cert-card"><i class="fas fa-briefcase cert-icon"></i><h3>Project Management</h3></div>
+<div class="cert-card"><i class="fas fa-certificate cert-icon"></i><h3>OEM Certifications</h3></div>
 </div>
 </div>
 
@@ -273,29 +309,40 @@ using Node.js, React, Django, HTMX and MERN stack.
 <div id="contact" class="section contact">
 <h2>Contact</h2>
 <p>Email: muvhangos@gmail.com</p>
-<p>
-<a href="https://wa.me/27724955002" target="_blank">
-<i class="fa-brands fa-whatsapp"></i> +27 72 495 5002
-</a>
-</p>
+<p><i class="fa-brands fa-whatsapp"></i> +27 72 495 5002</p>
 </div>
 
+<a href="https://wa.me/27724955002" class="whatsapp" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
 <footer>
-© 2026 Samuel Muvhango | Full-Stack Developer
+© 2026 Samuel Muvhango | Elite Portfolio
 </footer>
 
 <script>
-const sections=document.querySelectorAll(".section");
 
+/* Scroll animation */
+const sections=document.querySelectorAll(".section");
 window.addEventListener("scroll",()=>{
-const trigger=window.innerHeight-100;
-sections.forEach(section=>{
-const top=section.getBoundingClientRect().top;
-if(top<trigger){
-section.classList.add("show");
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-100){
+sec.classList.add("show");
 }
 });
+
+/* Progress bar */
+let scrollTop=document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let progress=(scrollTop/height)*100;
+document.getElementById("progressBar").style.width=progress+"%";
 });
+
+/* Dark/Light Toggle */
+function toggleMode(){
+document.body.classList.toggle("light");
+}
+
 </script>
 
 </body>
