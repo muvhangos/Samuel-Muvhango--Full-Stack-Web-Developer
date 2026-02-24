@@ -1,60 +1,50 @@
-/* RESPONSIVE STYLING */
-
-/* NAVIGATION MOBILE */
-@media (max-width:768px){
-  nav a{
-    display:block;
-    margin:10px 0;
-  }
-}
-
-/* PROJECTS GRID */
-@media (max-width:900px){
-  .projects{
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-  }
-}
-
 /* SKILLS GRID */
-@media (max-width:900px){
-  .skills-grid{
-    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:15px;
-  }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
-/* CERTIFICATIONS GRID */
-@media (max-width:900px){
-  .cert-grid{
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-  }
+/* SINGLE SKILL CARD */
+.skill {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.4s;
+  width: 100%;
+  max-width: 150px;
+  cursor: default;
 }
 
-/* PROFILE IMAGE MOBILE */
-@media (max-width:480px){
-  .profile{
-    width:120px;
-    border:2px solid #00ffff;
-  }
+body.light .skill {
+  background: #fff;
 }
 
-/* HIRE ME CARD MOBILE */
-@media (max-width:600px){
-  .hire-card{
-    padding:20px;
-    margin:15px;
-  }
-  .hire-form button{
-    padding:10px;
-  }
+/* ICON STYLE */
+.skill-icon {
+  font-size: 36px;
+  color: #00ffff;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
-/* FOOTER MOBILE */
-@media (max-width:480px){
-  footer{
-    font-size:12px;
-    padding:15px;
-  }
+/* SKILL HOVER EFFECT */
+.skill:hover {
+  background: #00ffff;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.skill:hover .skill-icon {
+  color: #000;
+}
+
+/* SKILL TEXT */
+.skill span {
+  display: block;
+  font-weight: bold;
+  margin-top: 5px;
 }
