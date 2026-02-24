@@ -1,21 +1,17 @@
-// Typing effect function
-function typeText(elementId, text, speed = 80, callback = null) {
-  const el = document.getElementById(elementId);
-  el.textContent = '';
-  let i = 0;
-  const interval = setInterval(() => {
-    el.textContent += text.charAt(i);
-    i++;
-    if (i === text.length) {
-      clearInterval(interval);
-      if (callback) callback();
+// Skill reveal on scroll
+const skills = document.querySelectorAll(".skill");
+
+function revealSkills() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  skills.forEach(skill => {
+    const skillTop = skill.getBoundingClientRect().top;
+
+    if (skillTop < triggerBottom) {
+      skill.classList.add("show");
     }
-  }, speed);
+  });
 }
 
-// Sequence typing
-typeText('typed-name', 'Samuel Muvhango', 100, () => {
-  typeText('typed-role', 'Full-Stack Developer', 80, () => {
-    typeText('typed-desc', 'Passionate about building scalable applications using modern technologies.', 50);
-  });
-});
+window.addEventListener("scroll", revealSkills);
+window.addEventListener("load", revealSkills);
