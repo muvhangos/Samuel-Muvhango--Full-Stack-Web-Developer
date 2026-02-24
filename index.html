@@ -16,227 +16,54 @@
 
 <style>
 /* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-body{
-  font-family:Arial, sans-serif;
-  background:#0f0f0f;
-  color:#fff;
-  transition:0.4s;
-}
-/* LIGHT MODE */
-body.light{
-  background:#f5f5f5;
-  color:#111;
-}
-/* SCROLL PROGRESS */
-.progress-bar{
-  position:fixed;
-  top:0;
-  left:0;
-  height:5px;
-  background:#00ffff;
-  width:0%;
-  z-index:2000;
-}
-/* NAV */
-nav{
-  background:#000;
-  padding:15px;
-  text-align:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-nav a{
-  color:#00ffff;
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:bold;
-}
-nav a:hover{
-  color:#ff9800;
-}
-/* TOGGLE BUTTON */
-.toggle{
-  position:fixed;
-  right:20px;
-  top:15px;
-  background:#00ffff;
-  color:#000;
-  border:none;
-  padding:8px 15px;
-  border-radius:20px;
-  cursor:pointer;
-  font-weight:bold;
-  z-index:2001;
-}
-/* SECTIONS */
-.section{
-  padding:80px 20px;
-  max-width:1100px;
-  margin:auto;
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s;
-}
-.section.show{
-  opacity:1;
-  transform:translateY(0);
-}
-h2{
-  text-align:center;
-  margin-bottom:40px;
-  color:#00ffff;
-}
-/* ABOUT */
-.header{
-  text-align:center;
-}
-.profile{
-  width:160px;
-  border-radius:50%;
-  border:3px solid #00ffff;
-  margin-bottom:20px;
-}
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:10px 25px;
-  background:#00ffff;
-  color:#000;
-  text-decoration:none;
-  border-radius:25px;
-  font-weight:bold;
-  transition:0.3s;
-}
-.btn:hover{
-  background:#ff9800;
-  color:#fff;
-  transform:scale(1.05);
-}
-/* PROJECTS */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-}
-.project-card{
-  background:#111;
-  padding:25px;
-  border-radius:15px;
-  border:1px solid #222;
-  transition:0.4s;
-}
-body.light .project-card{
-  background:#fff;
-  border:1px solid #ddd;
-}
-.project-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 10px 25px rgba(0,255,255,0.3);
-}
-/* SKILLS */
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:20px;
-}
-.skill{
-  background:#111;
-  padding:20px;
-  border-radius:12px;
-  text-align:center;
-  transition:0.3s;
-}
-body.light .skill{
-  background:#fff;
-}
-.skill:hover{
-  background:#00ffff;
-  color:#000;
-  transform:scale(1.05);
-}
-/* CERTIFICATIONS */
-.cert-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-.cert-card{
-  background:#111;
-  padding:25px;
-  border-radius:15px;
-  text-align:center;
-  transition:0.4s;
-  border:1px solid #222;
-}
-body.light .cert-card{
-  background:#fff;
-  border:1px solid #ddd;
-}
-.cert-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 10px 25px rgba(0,255,255,0.3);
-}
-.cert-icon{
-  font-size:40px;
-  margin-bottom:15px;
-  color:#00ffff;
-}
-/* CONTACT */
-.contact{
-  text-align:center;
-}
-/* HIRE ME FORM */
-.hire-form input,
-.hire-form textarea{
-  padding:10px;
-  width:100%;
-  margin:10px 0;
-  border-radius:8px;
-  border:1px solid #ccc;
-  background:#111;
-  color:#fff;
-  transition:0.3s;
-}
-body.light .hire-form input,
-body.light .hire-form textarea{
-  background:#fff;
-  color:#111;
-}
-.hire-form input:focus,
-.hire-form textarea:focus{
-  outline:none;
-  border-color:#00ffff;
-}
-.hire-form button{
-  margin-top:10px;
-}
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px;
-  border-radius:50%;
-  font-size:25px;
-  z-index:2000;
-}
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#000;
-  margin-top:50px;
-  font-size:14px;
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{font-family:Arial, sans-serif;background:#0f0f0f;color:#fff;transition:0.4s;}
+body.light{background:#f5f5f5;color:#111;}
+.progress-bar{position:fixed;top:0;left:0;height:5px;background:#00ffff;width:0%;z-index:2000;}
+nav{background:#000;padding:15px;text-align:center;position:sticky;top:0;z-index:1000;}
+nav a{color:#00ffff;margin:0 15px;text-decoration:none;font-weight:bold;}
+nav a:hover{color:#ff9800;}
+.toggle{position:fixed;right:20px;top:15px;background:#00ffff;color:#000;border:none;padding:8px 15px;border-radius:20px;cursor:pointer;font-weight:bold;z-index:2001;}
+.section{padding:80px 20px;max-width:1100px;margin:auto;opacity:0;transform:translateY(40px);transition:1s;}
+.section.show{opacity:1;transform:translateY(0);}
+h2{text-align:center;margin-bottom:40px;color:#00ffff;}
+.header{text-align:center;}
+.profile{width:160px;border-radius:50%;border:3px solid #00ffff;margin-bottom:20px;}
+.btn{display:inline-block;margin-top:20px;padding:10px 25px;background:#00ffff;color:#000;text-decoration:none;border-radius:25px;font-weight:bold;transition:0.3s;}
+.btn:hover{background:#ff9800;color:#fff;transform:scale(1.05);}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.project-card{background:#111;padding:25px;border-radius:15px;border:1px solid #222;transition:0.4s;}
+body.light .project-card{background:#fff;border:1px solid #ddd;}
+.project-card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(0,255,255,0.3);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
+.skill{background:#111;padding:20px;border-radius:12px;text-align:center;transition:0.3s;}
+body.light .skill{background:#fff;}
+.skill:hover{background:#00ffff;color:#000;transform:scale(1.05);}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.cert-card{background:#111;padding:25px;border-radius:15px;text-align:center;transition:0.4s;border:1px solid #222;}
+body.light .cert-card{background:#fff;border:1px solid #ddd;}
+.cert-card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(0,255,255,0.3);}
+.cert-icon{font-size:40px;margin-bottom:15px;color:#00ffff;}
+.contact{text-align:center;}
+.hire-card{max-width:500px;margin:20px auto;padding:25px;background:#111;border-radius:15px;box-shadow:0 10px 25px rgba(0,255,255,0.3);transition:0.3s;}
+body.light .hire-card{background:#fff;box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+.hire-card:hover{transform:translateY(-5px);}
+.hire-form input,.hire-form textarea{padding:12px;width:100%;margin:10px 0;border-radius:10px;border:1px solid #00ffff;background:#111;color:#fff;transition:0.3s;}
+body.light .hire-form input,body.light .hire-form textarea{background:#f5f5f5;color:#111;border:1px solid #00ffff;}
+.hire-form input:focus,.hire-form textarea:focus{outline:none;border-color:#ff9800;}
+.hire-form button{margin-top:10px;width:100%;padding:12px;background:#00ffff;color:#000;border:none;border-radius:25px;font-weight:bold;cursor:pointer;transition:0.3s;}
+.hire-form button:hover{background:#ff9800;color:#fff;transform:scale(1.05);}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:25px;z-index:2000;}
+footer{text-align:center;padding:20px;background:#000;margin-top:50px;font-size:14px;}
+
+/* RESPONSIVE */
+@media (max-width:768px){nav a{display:block;margin:10px 0;}}
+@media (max-width:900px){.projects{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}}
+@media (max-width:900px){.skills-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px;}}
+@media (max-width:900px){.cert-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}}
+@media (max-width:480px){.profile{width:120px;border:2px solid #00ffff;}}
+@media (max-width:600px){.hire-card{padding:20px;margin:15px;}.hire-form button{padding:10px;}}
+@media (max-width:480px){footer{font-size:12px;padding:15px;}}
 </style>
 </head>
 <body>
@@ -318,15 +145,17 @@ footer{
 <h2>Hire Me</h2>
 <p>If you want to work with me, send a message below:</p>
 
-<form id="hireForm" class="hire-form">
-  <input type="text" name="user_name" placeholder="Your Name" required>
-  <input type="email" name="user_email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-  <button type="submit" class="btn">Send Message</button>
-</form>
-<p id="formStatus" style="margin-top:10px;"></p>
+<div class="hire-card">
+  <form id="hireForm" class="hire-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <p id="formStatus" style="margin-top:10px;"></p>
+</div>
 
-<p>Or send a WhatsApp message directly:</p>
+<p style="margin-top:15px;">Or send a WhatsApp message directly:</p>
 <a href="https://wa.me/27724955002?text=Hello%20Samuel,%20I%20want%20to%20hire%20you" target="_blank" class="btn" style="background:#25D366;color:#fff;margin-top:10px;">Message on WhatsApp</a>
 </div>
 
@@ -334,12 +163,10 @@ footer{
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<footer>
-© 2026 Samuel Muvhango | Elite Portfolio
-</footer>
+<footer>© 2026 Samuel Muvhango | Elite Portfolio</footer>
 
 <script>
-/* Scroll animation */
+// Scroll animation & progress
 const sections=document.querySelectorAll(".section");
 window.addEventListener("scroll",()=>{
   sections.forEach(sec=>{
@@ -353,26 +180,26 @@ window.addEventListener("scroll",()=>{
   document.getElementById("progressBar").style.width=progress+"%";
 });
 
-/* Dark/Light Toggle */
-function toggleMode(){
-  document.body.classList.toggle("light");
-}
+// Dark/Light Toggle
+function toggleMode(){document.body.classList.toggle("light");}
 
-/* EmailJS form submission */
-document.getElementById('hireForm').addEventListener('submit', function(event) {
+// Smooth scroll for nav links
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',function(e){
+    e.preventDefault();
+    const target=document.querySelector(this.getAttribute('href'));
+    if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+// EmailJS form submission
+document.getElementById('hireForm').addEventListener('submit', function(event){
   event.preventDefault();
-  const form = this;
-  const status = document.getElementById('formStatus');
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form)
-    .then(() => {
-      status.style.color = 'lime';
-      status.innerText = 'Message sent successfully! I will contact you soon.';
-      form.reset();
-    }, (err) => {
-      console.error(err);
-      status.style.color = 'red';
-      status.innerText = 'Oops! Something went wrong. Please try again.';
-    });
+  const form=this;
+  const status=document.getElementById('formStatus');
+  emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',form)
+    .then(()=>{status.style.color='lime';status.innerText='Message sent successfully! I will contact you soon.';form.reset();},
+          (err)=>{console.error(err);status.style.color='red';status.innerText='Oops! Something went wrong. Please try again.';});
 });
 </script>
 </body>
