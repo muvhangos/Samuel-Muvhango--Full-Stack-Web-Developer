@@ -10,7 +10,90 @@
 .skill, .project-card {
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
+/* SKILLS GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
 
+/* SKILL CARD */
+.skill {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+  cursor: default;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* SKILL ICON */
+.skill img, .skill i {
+  font-size: 40px;
+  color: #00ffff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* SKILL TEXT */
+.skill span {
+  display: block;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+/* LIGHT MODE */
+body.light .skill {
+  background: #fff;
+}
+
+body.light .skill span {
+  color: #111;
+}
+
+/* HOVER EFFECTS */
+.skill:hover {
+  transform: scale(1.1);
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+.skill:hover img, .skill:hover i {
+  transform: scale(1.2) rotate(5deg);
+  color: #000;
+}
+
+.skill:hover span {
+  color: #000;
+}
+
+/* PROJECT CARD HOVER EFFECTS */
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
+}
+
+.project-card img {
+  transition: transform 0.3s;
+}
+
+.project-card:hover img {
+  transform: scale(1.2) rotate(3deg);
+}
 .skill:hover {
   transform: scale(1.1);
   background: #00ffff;
