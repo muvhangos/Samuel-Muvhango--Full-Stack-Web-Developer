@@ -1,84 +1,21 @@
-/* Fade-in + Slide-in Animation for sections & project cards */
-const sections = document.querySelectorAll(".section");
-const projectCards = document.querySelectorAll(".project-card");
-
-window.addEventListener("scroll", () => {
-    const triggerBottom = window.innerHeight - 100;
-
-    // Sections fade in
-    sections.forEach(section => {
-        constconst sections = document.querySelectorAll(".section");
-const projectCards = document.querySelectorAll(".project-card");
-
-window.addEventListener("scroll", () => {
-    const triggerBottom = window.innerHeight - 100;
-
-    sections.forEach(section => {
-        if(section.getBoundingClientRect().top < triggerBottom){
-            section.classList.add("visible");
-        }
-    });
-
-    projectCards.forEach((card, index) => {
-        if(card.getBoundingClientRect().top < triggerBottom){
-            card.classList.add("visible");
-        }
-    });
-}); top = section.getBoundingClientRect().top;
-        if(top < triggerBottom){
-            section.classList.add("visible");
-        }
-    });
-
-    // Project cards slide in
-    projectCards.forEach((card, index) => {
-        const top = card.getBoundingClientRect().top;
-        if(top < triggerBottom){
-            card.classList.add("visible");
-            // Alternate left/right slide
-            if(index % 2 === 0){
-                card.classList.remove("slide-right");
-            } else {
-                card.classList.add("slide-right");
-            }
-        }
-    });
-});
-/* Typing Animation */
-const roles = [
-    "Full-Stack Developer",
-    "Django Developer",
-    "React Developer",
-    "MERN Stack Developer"
-];
-
-let roleIndex = 0;
-let charIndex = 0;
-let currentRole = "";
-let isDeleting = false;
-
-function typeEffect() {
-    const typingElement = document.getElementById("typing");
-    currentRole = roles[roleIndex];
-
-    if (!isDeleting) {
-        typingElement.textContent = currentRole.substring(0, charIndex++);
-        if (charIndex > currentRole.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 1000);
-            return;
-        }
-    } else {
-        typingElement.textContent = currentRole.substring(0, charIndex--);
-        if (charIndex < 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-        }
+// Typing effect function
+function typeText(elementId, text, speed = 80, callback = null) {
+  const el = document.getElementById(elementId);
+  el.textContent = '';
+  let i = 0;
+  const interval = setInterval(() => {
+    el.textContent += text.charAt(i);
+    i++;
+    if (i === text.length) {
+      clearInterval(interval);
+      if (callback) callback();
     }
-
-    setTimeout(typeEffect, isDeleting ? 50 : 100);
+  }, speed);
 }
 
-typeEffect();
-
-
+// Sequence typing
+typeText('typed-name', 'Samuel Muvhango', 100, () => {
+  typeText('typed-role', 'Full-Stack Developer', 80, () => {
+    typeText('typed-desc', 'Passionate about building scalable applications using modern technologies.', 50);
+  });
+});
