@@ -4,7 +4,261 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samuel Muvhango | Full-Stack Developer</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Muvhango | Full-Stack Developer</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  padding: 40px;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00f2ff;
+  margin-bottom: 20px;
+}
+
+.typing-text {
+  font-size: 32px;
+  font-weight: bold;
+  border-right: 3px solid #00f2ff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(30) forwards, blink 0.7s infinite;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ccc;
+  max-width: 600px;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* SECTION */
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  background: #141414;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.skill img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.skill i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  background: #1c1c1c;
+}
+
+/* MERN BADGE */
+.mern-badge .mern-icons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.mern-badge .mern-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: #00f2ff;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #888;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+  <!-- PROFILE IMAGE -->
+  <!-- Replace profile.jpg with your actual image file -->
+  <img src="profile.jpg" alt="Samuel Muvhango" class="profile-pic">
+
+  <div class="typing-text">
+    Samuel Muvhango – Full-Stack Developer
+  </div>
+
+  <div class="subtitle">
+    Passionate about building scalable applications using modern technologies.
+  </div>
+
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Technical Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+      <span>HTML</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+      <span>CSS</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+      <span>React</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+      <span>Node.js</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg">
+      <span>MongoDB</span>
+    </div>
+
+    <!-- MERN BADGE -->
+    <div class="skill mern-badge">
+      <div class="mern-icons">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+      </div>
+      <span>MERN Stack</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
+      <span>AWS</span>
+    </div>
+
+    <div class="skill">
+      <i class="fas fa-lock"></i>
+      <span>JWT Authentication</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact">
+    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>
+      <a href="https://github.com/yourusername" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      |
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Samuel Muvhango | Full-Stack Developer
+</footer>
+
+</body>
+</html>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -208,3 +462,4 @@ footer {
 
 </body>
 </html>
+
