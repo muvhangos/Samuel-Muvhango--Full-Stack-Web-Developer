@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/sitemap.xml
