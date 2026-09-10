@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Samuel Muvhango | Full Stack Web Developer | Python | React | Django | Node.js</title>
+
+  <meta name="description" content="Samuel Muvhango is a Full Stack Web Developer and IT & Systems Engineer specializing in Python, Django, React, Next.js, Node.js, TypeScript, MERN, HTMX, PostgreSQL, MongoDB, Firebase and cloud deployment. Open to developer and IT opportunities worldwide.">
+  <meta name="keywords" content="Samuel Muvhango, Full Stack Web Developer, Python Developer, JavaScript Developer, React Developer, Next.js Developer, Django Developer, Node.js Developer, TypeScript, MERN, HTMX, PostgreSQL, MongoDB, Firebase, AWS, Azure, IT Systems Engineer, Software Developer, Johannesburg Developer, South Africa Developer, Remote Developer">
+  <meta name="author" content="Samuel Muvhango">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#070b17">
+
+  <link rel="canonical" href="https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/">
+  <link rel="icon" href="images/profile.jpeg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Samuel Muvhango | Full Stack Web Developer">
+  <meta property="og:description" content="Modern full-stack developer portfolio — Python, Django, React, Next.js, Node.js, TypeScript, MERN, PostgreSQL, MongoDB, Firebase and cloud deployment.">
+  <meta property="og:url" content="https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/">
+  <meta property="og:image" content="https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/images/profile.jpeg">
+  <meta property="og:site_name" content="Samuel Muvhango Portfolio">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Samuel Muvhango | Full Stack Web Developer">
+  <meta name="twitter:description" content="Python • Django • React • Next.js • Node.js • TypeScript • MERN • PostgreSQL • Cloud">
+  <meta name="twitter:image" content="https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/images/profile.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#050816;
+      --bg2:#0a1024;
+      --panel:rgba(13,20,43,.78);
+      --panel2:rgba(18,28,58,.72);
+      --text:#f8fbff;
+      --muted:#a8b5d1;
+      --cyan:#38bdf8;
+      --blue:#6366f1;
+      --violet:#a855f7;
+      --green:#22c55e;
+      --line:rgba(148,163,184,.18);
+      --glow:0 0 28px rgba(56,189,248,.20),0 0 70px rgba(99,102,241,.10);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 10%,rgba(56,189,248,.13),transparent 28%),
+        radial-gradient(circle at 90% 20%,rgba(168,85,247,.13),transparent 30%),
+        linear-gradient(135deg,var(--bg),var(--bg2));
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    ::selection{background:var(--cyan);color:#00111b}
+
+    #particles-js{position:fixed;inset:0;z-index:-2;pointer-events:none}
+    .aurora{position:fixed;inset:-30%;z-index:-3;filter:blur(80px);opacity:.28;pointer-events:none;background:
+      radial-gradient(circle at 30% 40%,rgba(56,189,248,.30),transparent 24%),
+      radial-gradient(circle at 70% 60%,rgba(168,85,247,.24),transparent 24%);
+      animation:aurora 14s ease-in-out infinite alternate}
+    @keyframes aurora{from{transform:translate(-2%,-1%) scale(1)}to{transform:translate(3%,2%) scale(1.08)}}
+
+    .progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--violet));z-index:9999;box-shadow:0 0 15px var(--cyan)}
+
+    nav{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(5,8,22,.76);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+      padding:14px 4%;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{font-family:"Space Grotesk";font-weight:800;letter-spacing:.04em;color:white;text-decoration:none}
+    .brand span{color:var(--cyan)}
+    .navlinks{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+    .navlinks a{text-decoration:none;color:#cbd5e1;font-size:.9rem;font-weight:700;transition:.25s}
+    .navlinks a:hover{color:var(--cyan);text-shadow:0 0 12px rgba(56,189,248,.7)}
+
+    .container{width:min(1180px,92%);margin:auto}
+    .section{padding:90px 0}
+    .section-title{text-align:center;margin-bottom:45px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.18em;margin-bottom:10px}
+    .section-title h2{font-family:"Space Grotesk";font-size:clamp(2rem,4vw,3rem)}
+    .section-title p{color:var(--muted);max-width:760px;margin:10px auto 0}
+
+    .hero{min-height:calc(100vh - 66px);display:grid;place-items:center;padding:80px 0}
+    .hero-card{
+      text-align:center;max-width:1000px;margin:auto;
+      padding:55px 28px;border:1px solid rgba(56,189,248,.22);
+      border-radius:34px;background:linear-gradient(145deg,rgba(12,20,45,.82),rgba(10,15,32,.62));
+      box-shadow:var(--glow);backdrop-filter:blur(16px);
+    }
+    .profile{
+      width:155px;height:155px;object-fit:cover;border-radius:50%;
+      border:3px solid var(--cyan);padding:5px;
+      box-shadow:0 0 20px rgba(56,189,248,.7),0 0 55px rgba(99,102,241,.28);
+      margin-bottom:22px
+    }
+    .status{
+      display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;
+      border:1px solid rgba(34,197,94,.28);background:rgba(34,197,94,.08);color:#86efac;
+      font-size:.82rem;font-weight:800;margin-bottom:18px
+    }
+    .dot{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green);animation:pulse 1.6s infinite}
+    @keyframes pulse{50%{opacity:.35;transform:scale(.7)}}
+    .hero h1{font-family:"Space Grotesk";font-size:clamp(2.8rem,7vw,5.8rem);line-height:1.02;letter-spacing:-.055em}
+    .gradient{background:linear-gradient(90deg,#fff,var(--cyan),#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero h2{color:var(--cyan);font-size:clamp(1.05rem,2.5vw,1.65rem);margin:20px 0 14px}
+    .hero p{color:var(--muted);font-size:1.05rem;max-width:820px;margin:auto}
+    .hero strong{color:#e2e8f0}
+    .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{
+      display:inline-flex;align-items:center;gap:9px;padding:13px 20px;border-radius:12px;
+      text-decoration:none;font-weight:800;border:1px solid var(--line);transition:.25s
+    }
+    .btn.primary{background:linear-gradient(90deg,var(--cyan),#60a5fa);color:#03131d;border:none;box-shadow:0 0 25px rgba(56,189,248,.28)}
+    .btn.secondary{background:rgba(255,255,255,.04);color:white}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,0,0,.25)}
+
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+    .stat{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035)}
+    .stat b{display:block;font-size:1.35rem;color:white}
+    .stat span{font-size:.78rem;color:var(--muted)}
+
+    .glass{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--glow);backdrop-filter:blur(15px)}
+    .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+    .about-card{padding:30px}
+    .about-card h3{font-family:"Space Grotesk";font-size:1.35rem;margin-bottom:12px}
+    .about-card p{color:var(--muted);margin-bottom:14px}
+    .keywords{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+    .tag{padding:7px 11px;border:1px solid rgba(56,189,248,.22);background:rgba(56,189,248,.06);color:#c7efff;border-radius:999px;font-size:.8rem;font-weight:700}
+    .availability{display:grid;gap:12px}
+    .availability div{padding:14px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .availability i{color:var(--cyan);width:22px}
+
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project{
+      padding:24px;display:flex;flex-direction:column;min-height:305px;
+      transition:.3s;position:relative;overflow:hidden
+    }
+    .project:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(56,189,248,.08),transparent 50%,rgba(168,85,247,.08));opacity:0;transition:.3s}
+    .project:hover{transform:translateY(-8px);border-color:rgba(56,189,248,.4);box-shadow:0 18px 55px rgba(0,0,0,.28),0 0 30px rgba(56,189,248,.12)}
+    .project:hover:before{opacity:1}
+    .project>*{position:relative}
+    .project-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,rgba(56,189,248,.16),rgba(168,85,247,.14));color:var(--cyan);font-size:1.2rem;margin-bottom:16px}
+    .project h3{font-family:"Space Grotesk";font-size:1.25rem;margin-bottom:7px}
+    .project p{color:var(--muted);font-size:.9rem;flex:1}
+    .stack{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}
+    .stack span{font-size:.7rem;color:#dbeafe;padding:4px 7px;border-radius:7px;background:rgba(148,163,184,.09);border:1px solid var(--line)}
+    .project-links{display:flex;gap:8px;flex-wrap:wrap}
+    .project-links a{font-size:.76rem;text-decoration:none;font-weight:800;color:var(--cyan)}
+    .project-links a:hover{text-decoration:underline}
+
+    .skills{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
+    .skill{padding:19px 12px;text-align:center;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid var(--line);transition:.25s}
+    .skill:hover{transform:translateY(-5px);border-color:rgba(56,189,248,.4);box-shadow:0 0 24px rgba(56,189,248,.1)}
+    .skill i{display:block;color:var(--cyan);font-size:1.7rem;margin-bottom:8px}
+    .skill b{font-size:.84rem}
+
+    .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .cert{padding:23px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line);position:relative;overflow:hidden}
+    .cert:after{content:"";position:absolute;right:-35px;top:-35px;width:100px;height:100px;border-radius:50%;background:rgba(56,189,248,.08);box-shadow:0 0 45px rgba(56,189,248,.08)}
+    .cert i{font-size:1.4rem;color:var(--cyan);margin-bottom:12px}
+    .cert h3{font-size:1rem;margin-bottom:5px}
+    .cert p{font-size:.8rem;color:var(--muted)}
+    .cert .issuer{color:#bae6fd;font-weight:700}
+
+    .experience{display:grid;gap:14px;max-width:920px;margin:auto}
+    .role{padding:22px 25px;border-left:3px solid var(--cyan)}
+    .role h3{font-family:"Space Grotesk"}
+    .role p{color:var(--muted);font-size:.9rem}
+
+    .contact{text-align:center;padding:50px}
+    .contact p{color:var(--muted);max-width:700px;margin:8px auto}
+    .contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .contact-links a{text-decoration:none}
+    .contact-links .btn i{color:var(--cyan)}
+    .whatsapp{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:1.5rem;box-shadow:0 0 25px rgba(37,211,102,.4);z-index:1000;text-decoration:none;transition:.25s}
+    .whatsapp:hover{transform:scale(1.08)}
+
+    footer{padding:35px 0;color:#8190ad;text-align:center;border-top:1px solid var(--line);font-size:.82rem}
+    footer a{color:var(--cyan);text-decoration:none}
+
+    @media(max-width:950px){
+      .projects{grid-template-columns:repeat(2,1fr)}
+      .skills{grid-template-columns:repeat(3,1fr)}
+      .certs{grid-template-columns:repeat(2,1fr)}
+      .about-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:700px){
+      nav{justify-content:center}
+      .brand{display:none}
+      .navlinks{gap:11px}
+      .navlinks a{font-size:.75rem}
+      .hero{padding:45px 0}
+      .hero-card{padding:38px 18px}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .projects,.certs{grid-template-columns:1fr}
+      .skills{grid-template-columns:repeat(2,1fr)}
+      .section{padding:65px 0}
+      .contact{padding:32px 20px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Samuel Muvhango",
+    "jobTitle":"Full Stack Web Developer | IT & Systems Engineer",
+    "url":"https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/",
+    "email":"mailto:muvhangos@gmail.com",
+    "telephone":"+27724955002",
+    "sameAs":[
+      "https://www.linkedin.com/in/samuel-muvhango-78821a112",
+      "https://github.com/muvhangos",
+      "https://muvhangos.github.io/SamsPortfolio/"
+    ],
+    "knowsAbout":[
+      "Python","Django","JavaScript","TypeScript","React","Next.js","Node.js",
+      "Express.js","MERN","HTMX","PostgreSQL","MongoDB","Firebase","Prisma",
+      "AWS","Microsoft Azure","REST APIs","Full Stack Web Development"
+    ],
+    "worksFor":{"@type":"Organization","name":"Open to opportunities"}
+  }
+  </script>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div class="aurora"></div>
+  <div class="progress" id="progress"></div>
+
+  <nav>
+    <a class="brand" href="#top">SAMUEL<span>.DEV</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#training">Training</a>
+                <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <img class="profile" src="images/profile.jpeg" alt="Samuel Muvhango - Full Stack Web Developer">
+          <div class="status"><span class="dot"></span> Open to Developer & IT Opportunities</div>
+          <h1>Samuel <span class="gradient">Muvhango</span></h1>
+          <h2>FULL STACK WEB DEVELOPER &nbsp;|&nbsp; IT & SYSTEMS ENGINEER</h2>
+          <p>
+            I build modern, production-ready web applications with <strong>Python, Django, React, Next.js, Node.js, TypeScript, MERN, HTMX, PostgreSQL, MongoDB and Firebase</strong>.
+            I combine software development with enterprise IT, systems engineering, technical support and cloud experience.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="cv/Samuel_Muvhango_CV.pdf" download><i class="fas fa-file-arrow-down"></i> Download CV</a>
+            <a class="btn secondary" href="https://github.com/muvhangos" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/samuel-muvhango-78821a112" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><b>Full Stack</b><span>Frontend + Backend</span></div>
+            <div class="stat"><b>Python</b><span>Primary programming language</span></div>
+            <div class="stat"><b>Cloud</b><span>Render • Vercel • Firebase</span></div>
+            <div class="stat"><b>Production</b><span>Real deployed applications</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">01 • Profile</div>
+          <h2>Developer profile</h2>
+          <p>Recruiter-friendly, technology-rich and built around real applications rather than a list of buzzwords.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="glass about-card">
+            <h3>Modern software development with enterprise IT experience</h3>
+            <p>
+              Full Stack Web Developer and IT & Systems Engineer with hands-on experience building responsive web applications,
+              authentication systems, REST APIs, database-backed applications and cloud deployments.
+            </p>
+            <p>
+              My development work spans <strong>Python/Django, JavaScript/TypeScript, React, Next.js, Node.js/Express,
+              MERN, HTMX, PostgreSQL, Prisma, MongoDB and Firebase</strong>. I also bring practical enterprise experience
+              in systems administration, service delivery, messaging, endpoint management, troubleshooting and technical support.
+            </p>
+            <div class="keywords">
+              <span class="tag">Python Developer</span><span class="tag">Django Developer</span>
+              <span class="tag">React Developer</span><span class="tag">Next.js</span>
+              <span class="tag">Node.js</span><span class="tag">TypeScript</span>
+              <span class="tag">MERN</span><span class="tag">HTMX</span>
+              <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span>
+              <span class="tag">Firebase</span><span class="tag">REST APIs</span>
+              <span class="tag">Prisma</span><span class="tag">Cloud Deployment</span>
+            </div>
+          </article>
+
+          <aside class="glass about-card">
+            <h3>What I bring</h3>
+            <div class="availability">
+              <div><i class="fas fa-code"></i> <strong>End-to-end development</strong><br><span>UI, APIs, authentication, databases and deployment.</span></div>
+              <div><i class="fas fa-cloud"></i> <strong>Modern deployment</strong><br><span>Render, Vercel, Firebase and GitHub workflows.</span></div>
+              <div><i class="fas fa-server"></i> <strong>IT engineering</strong><br><span>Enterprise systems, support, troubleshooting and service delivery.</span></div>
+              <div><i class="fas fa-robot"></i> <strong>AI-ready mindset</strong><br><span>Building with modern developer tools and AI-assisted workflows.</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">02 • Experience</div>
+          <h2>Enterprise IT + development</h2>
+        </div>
+        <div class="experience">
+          <article class="glass role"><h3>Innovation Group UK — Admin Tech</h3><p>Enterprise administration, technology support and operational service delivery.</p></article>
+          <article class="glass role"><h3>Gijima Technologies — Field Service Engineer</h3><p>Technical support, field engineering, troubleshooting and customer-facing IT services.</p></article>
+          <article class="glass role"><h3>Dimension Data — AD & Messaging Engineer</h3><p>Enterprise Active Directory, messaging and infrastructure support.</p></article>
+          <article class="glass role"><h3>T-Systems / SASOL — Migration Engineer</h3><p>Migration engineering, Linux devices, remote/VIP support, SLA bridges, AirWatch/MDM, Lync, Exchange, VPN, Wi-Fi and mobile-device support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">03 • Portfolio</div>
+          <h2>Featured production projects</h2>
+          <p>Real applications demonstrating authentication, databases, APIs, responsive UI and cloud deployment.</p>
+        </div>
+
+        <div class="projects">
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+            <h3>Mini Weather App</h3>
+            <p>Production weather application with authentication, PostgreSQL persistence, Prisma and live weather search.</p>
+            <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>Open-Meteo</span><span>Render</span></div>
+            <div class="project-links">
+              <a href="https://mini-weather-app-1.onrender.com" target="_blank">Live Demo ↗</a>
+              <a href="https://github.com/muvhangos/mini-weather-app" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-comments"></i></div>
+            <h3>MiniChat T3</h3>
+            <p>Full-stack chat application using modern Next.js architecture, Prisma, Neon PostgreSQL and authentication.</p>
+            <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>Neon</span><span>PostgreSQL</span></div>
+            <div class="project-links">
+              <a href="https://minichat-t3-final-project-1-1.onrender.com" target="_blank">Live Demo ↗</a>
+              <a href="https://github.com/muvhangos/minichat-t3-final-project-1" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>BookEasy</h3>
+            <p>Glossy full-stack service-booking platform for barbershops, tutors, churches, schools and fitness businesses.</p>
+            <div class="stack"><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>Firebase</span><span>PayFast</span></div>
+            <div class="project-links">
+              <a href="https://bookeasy-nine.vercel.app" target="_blank">Live Demo ↗</a>
+              <a href="https://github.com/muvhangos/-bookeasy" target="_blank">GitHub ↗</a>
+              <a href="https://bookeasy-api-olsc.onrender.com/health" target="_blank">API Health ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-calendar-days"></i></div>
+            <h3>Simple Service Booking</h3>
+            <p>Django service-booking system with account authentication, booking workflow, PostgreSQL-ready deployment and Render hosting.</p>
+            <div class="stack"><span>Python</span><span>Django</span><span>HTML/CSS</span><span>PostgreSQL</span><span>Render</span></div>
+            <div class="project-links">
+              <a href="https://simple-service-booking.onrender.com" target="_blank">Live Demo ↗</a>
+              <a href="https://github.com/muvhangos/simple-service-booking" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-droplet"></i></div>
+            <h3>Madi Alert</h3>
+            <p>Water fault reporting application with user authentication, JWT, secure passwords, photo uploads and report tracking.</p>
+            <div class="stack"><span>Node.js</span><span>Express</span><span>JWT</span><span>bcrypt</span><span>Multer</span><span>REST API</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/madi-alert" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Web Programming Bootcamp</h3>
+            <p>Django service-booking coursework demonstrating customer and administrator roles and practical full-stack development.</p>
+            <div class="stack"><span>Python</span><span>Django</span><span>HTML</span><span>CSS</span><span>Authentication</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/web-programming-bootcamp" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-face-laugh"></i></div>
+            <h3>Jokeroo / Joke Generator</h3>
+            <p>Interactive application with login flow and an API-driven joke experience, demonstrating frontend logic and user interaction.</p>
+            <div class="stack"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>API</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/Jokeroo.app" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-school"></i></div>
+            <h3>Nanga Primary School</h3>
+            <p>School-focused web project demonstrating responsive frontend structure, navigation and content presentation.</p>
+            <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/Nanga-Primary-School" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Nanga Admin Dashboard</h3>
+            <p>Administrative dashboard project focused on structured UI, data presentation and management workflows.</p>
+            <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Dashboard UI</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/Nanga-Admin-Dashboard" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>MERN Stack Projects</h3>
+            <p>Practical MERN experiments covering JavaScript, React, Node.js, Express and MongoDB concepts.</p>
+            <div class="stack"><span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/MERN-Stuck" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-wrench"></i></div>
+            <h3>Request Service App</h3>
+            <p>Service-request application demonstrating practical web forms, workflows and customer-facing UI.</p>
+            <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/Request-Service-App" target="_blank">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="glass project">
+            <div class="project-icon"><i class="fas fa-code"></i></div>
+            <h3>Full Stack Developer Portfolio</h3>
+            <p>This portfolio itself is engineered as a recruiter-facing profile with SEO metadata, structured data and modern UI.</p>
+            <div class="stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>SEO</span><span>Schema.org</span></div>
+            <div class="project-links">
+              <a href="https://github.com/muvhangos/Samuel-Muvhango--Full-Stack-Web-Developer" target="_blank">GitHub ↗</a>
+              <a href="https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/" target="_blank">Live Portfolio ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">04 • Technology</div>
+          <h2>Modern technology stack</h2>
+          <p>Keywords are presented naturally so both recruiters and search engines can understand the engineering profile.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skill"><i class="fab fa-python"></i><b>Python</b></div>
+          <div class="skill"><i class="fab fa-js"></i><b>JavaScript</b></div>
+          <div class="skill"><i class="fas fa-code"></i><b>TypeScript</b></div>
+          <div class="skill"><i class="fab fa-react"></i><b>React</b></div>
+          <div class="skill"><i class="fas fa-layer-group"></i><b>Next.js</b></div>
+          <div class="skill"><i class="fab fa-node-js"></i><b>Node.js</b></div>
+          <div class="skill"><i class="fas fa-server"></i><b>Express.js</b></div>
+          <div class="skill"><i class="fas fa-leaf"></i><b>Django</b></div>
+          <div class="skill"><i class="fas fa-bolt"></i><b>HTMX</b></div>
+          <div class="skill"><i class="fas fa-database"></i><b>PostgreSQL</b></div>
+          <div class="skill"><i class="fas fa-database"></i><b>MongoDB</b></div>
+          <div class="skill"><i class="fas fa-database"></i><b>Prisma ORM</b></div>
+          <div class="skill"><i class="fas fa-fire"></i><b>Firebase</b></div>
+          <div class="skill"><i class="fas fa-cloud"></i><b>AWS</b></div>
+          <div class="skill"><i class="fab fa-microsoft"></i><b>Microsoft Azure</b></div>
+          <div class="skill"><i class="fab fa-github"></i><b>GitHub</b></div>
+          <div class="skill"><i class="fas fa-rocket"></i><b>Render</b></div>
+          <div class="skill"><i class="fas fa-triangle-exclamation"></i><b>Vercel</b></div>
+          <div class="skill"><i class="fas fa-plug"></i><b>REST APIs</b></div>
+          <div class="skill"><i class="fas fa-lock"></i><b>Authentication</b></div>
+        </div>
+      </div>
+    </section>
+
+    
+<section id="training" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">CODE COLLEGE</span>
+      <h2>BootCamp Training</h2>
+      <p>Practical, project-focused training in modern web development and full-stack programming.</p>
+    </div>
+
+    <div class="cards-grid">
+      <article class="glass-card">
+        <div class="card-icon">⚡</div>
+        <h3>Web Development BootCamp</h3>
+        <p class="muted">Code College ZA</p>
+        <p>
+          Hands-on web development training covering modern front-end and server-side
+          technologies, responsive interfaces, JavaScript development, React, Node.js,
+          Express.js, Git and GitHub.
+        </p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          <span>React</span><span>Node.js</span><span>Express.js</span>
+          <span>Git</span><span>GitHub</span>
+        </div>
+      </article>
+
+      <article class="glass-card">
+        <div class="card-icon">🐍</div>
+        <h3>Web Programming BootCamp</h3>
+        <p class="muted">Code College ZA</p>
+        <p>
+          Full-stack programming training focused on Python and modern web application
+          development, including Django, HTMX, REST APIs, databases, CRUD systems,
+          authentication and application deployment.
+        </p>
+        <div class="tags">
+          <span>Python</span><span>Django</span><span>HTMX</span>
+          <span>REST APIs</span><span>MongoDB</span><span>CRUD</span>
+          <span>Authentication</span><span>Full Stack</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">05 • Credentials</div>
+          <h2>Certifications & professional learning</h2>
+          <p>Selected credentials and technical learning that support the development and IT engineering profile.</p>
+        </div>
+
+        <div class="certs">
+          <article class="cert"><i class="fas fa-code"></i><h3>Introduction to Programming</h3><p class="issuer">Code College ZA</p><p>Issued 2024 • Credential ID 4130</p></article>
+          <article class="cert"><i class="fab fa-python"></i><h3>Python</h3><p class="issuer">Code College ZA</p><p>Issued 2025 • Credential ID 4395</p></article>
+          <article class="cert"><i class="fas fa-laptop-code"></i><h3>Full Stack Web Development Bootcamp</h3><p class="issuer">Code College</p><p>Practical training in JavaScript, Python, React, Node.js, Django, HTMX, MERN, Next.js and MongoDB.</p></article>
+          <article class="cert"><i class="fab fa-aws"></i><h3>AWS Essentials</h3><p class="issuer">AWS / Professional Learning</p><p>Completed cloud fundamentals training.</p></article>
+          <article class="cert"><i class="fab fa-microsoft"></i><h3>Microsoft Azure Fundamentals — AZ-900</h3><p class="issuer">Microsoft</p><p>Azure cloud fundamentals.</p></article>
+          <article class="cert"><i class="fab fa-microsoft"></i><h3>Microsoft Azure AI Fundamentals — AI-900</h3><p class="issuer">Microsoft</p><p>AI and Azure AI fundamentals.</p></article>
+          <article class="cert"><i class="fas fa-shield-halved"></i><h3>Fortinet Network Security Expert</h3><p class="issuer">Fortinet</p><p>Network and cybersecurity fundamentals.</p></article>
+          <article class="cert"><i class="fas fa-cloud"></i><h3>AWS Solutions Architect — Associate</h3><p class="issuer">AWS</p><p>Cloud architecture learning and professional development.</p></article>
+          <article class="cert"><i class="fas fa-certificate"></i><h3>Microsoft MCID</h3><p class="issuer">Microsoft</p><p>Microsoft technical credential.</p></article>
+          <article class="cert"><i class="fas fa-network-wired"></i><h3>Fortinet NSE1–NSE3</h3><p class="issuer">Fortinet</p><p>Cybersecurity awareness and network security training.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="glass contact">
+          <div class="eyebrow">06 • Let's connect</div>
+          <h2>Ready to build, improve or support modern technology?</h2>
+          <p>
+            I am open to Full Stack Developer, Python Developer, JavaScript Developer, React Developer,
+            IT Systems Engineer, Technical Support and related technology opportunities.
+          </p>
+          <div class="contact-links">
+            <a class="btn primary" href="mailto:muvhangos@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+            <a class="btn secondary" href="tel:+27724955002"><i class="fas fa-phone"></i> Call</a>
+            <a class="btn secondary" href="https://wa.me/27724955002" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/samuel-muvhango-78821a112" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a class="btn secondary" href="https://github.com/muvhangos" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp" href="https://wa.me/27724955002" target="_blank" rel="noopener" aria-label="Contact Samuel on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <footer>
+    © 2026 Samuel Muvhango • Full Stack Web Developer | IT & Systems Engineer •
+    <a href="https://github.com/muvhangos" target="_blank" rel="noopener">GitHub</a> •
+    <a href="https://www.linkedin.com/in/samuel-muvhango-78821a112" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+
+  <script>
+    const progress = document.getElementById("progress");
+    window.addEventListener("scroll", () => {
+      const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      progress.style.width = max > 0 ? (window.scrollY / max * 100) + "%" : "0%";
+    });
+
+    // Lightweight animated background — no external JavaScript dependency required.
+    const canvas = document.createElement("canvas");
+    canvas.style.position = "fixed";
+    canvas.style.inset = "0";
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
+    canvas.style.pointerEvents = "none";
+    canvas.style.opacity = ".32";
+    document.getElementById("particles-js").appendChild(canvas);
+
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    function resize(){
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = innerWidth * dpr;
+      canvas.height = innerHeight * dpr;
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      particles = Array.from({length: Math.min(75, Math.floor(innerWidth/18))}, () => ({
+        x:Math.random()*innerWidth, y:Math.random()*innerHeight,
+        r:Math.random()*1.8+.5, vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25
+      }));
+    }
+    function draw(){
+      ctx.clearRect(0,0,innerWidth,innerHeight);
+      for(const p of particles){
+        p.x += p.vx; p.y += p.vy;
+        if(p.x<0)p.x=innerWidth;if(p.x>innerWidth)p.x=0;
+        if(p.y<0)p.y=innerHeight;if(p.y>innerHeight)p.y=0;
+        ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle="rgba(56,189,248,.65)";ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    addEventListener("resize", resize); resize(); draw();
+  </script>
+</body>
+</html>
