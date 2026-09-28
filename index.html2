@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Muvhango | MERN + Django + Power BI | Ex-Dimension Data, T-Systems</title>
+<meta name="description" content="Enterprise IT Engineer turned Full Stack Developer. 10+ years at Dimension Data, T-Systems, Gijima. Building production SaaS with MERN, Django, Power BI. Johannesburg, open to remote.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>body{font-family:Inter,sans-serif}</style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900">
+
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+  <div class="flex flex-col md:flex-row justify-between gap-8">
+    <div>
+      <p class="text-sm font-semibold tracking-widest text-blue-600">OPEN TO REMOTE • JOHANNESBURG, SA</p>
+      <h1 class="text-5xl font-extrabold leading-tight mt-2">Samuel Muvhango</h1>
+      <h2 class="text-2xl font-semibold text-slate-700 mt-2">Enterprise IT Engineer → Full Stack Developer</h2>
+      <p class="text-lg text-slate-600 mt-4 max-w-2xl">
+        10+ years enterprise IT at <b>Dimension Data, T-Systems/SASOL, Gijima</b>.
+        Now building production SaaS that takes real payments.
+        I ship MERN + Django apps with Power BI analytics — from UI to deployment to support.
+      </p>
+      <div class="flex gap-3 mt-6">
+        <a href="#portfolio" class="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold">View Live SaaS →</a>
+        <a href="https://github.com/muvhangos" class="bg-white border px-6 py-3 rounded-xl font-bold">GitHub</a>
+        <a href="https://linkedin.com/in/" class="bg-white border px-6 py-3 rounded-xl font-bold">LinkedIn</a>
+      </div>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow-lg border h-fit min-w-[300px]">
+      <p class="text-sm text-slate-500">STACK</p>
+      <p class="font-bold mt-2">Frontend: React, Next.js, TypeScript, Tailwind</p>
+      <p class="font-bold mt-2">Backend: Node.js, Django, Express, REST APIs</p>
+      <p class="font-bold mt-2">Data: PostgreSQL, MongoDB, Prisma, Power BI, Python</p>
+      <p class="font-bold mt-2">Deploy: Vercel, Render, Firebase, Neon</p>
+      <p class="text-sm text-slate-500 mt-4">EDGE</p>
+      <p class="font-bold">Enterprise IT • AD/Exchange/MDM • SLA • Support</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h3 class="text-2xl font-bold">Enterprise Experience → Developer Edge</h3>
+  <div class="grid md:grid-cols-2 gap-4 mt-6">
+    <div class="bg-white p-5 rounded-xl border"><b>T-Systems / SASOL — Migration Engineer</b><p class="text-sm text-slate-600 mt-2">500+ user migrations, AirWatch MDM, VPN, Exchange, Lync, Wi-Fi, remote & VIP support, SLA bridges.</p></div>
+    <div class="bg-white p-5 rounded-xl border"><b>Dimension Data — AD & Messaging Engineer</b><p class="text-sm text-slate-600 mt-2">Enterprise Active Directory, messaging infrastructure, enterprise support workflows.</p></div>
+    <div class="bg-white p-5 rounded-xl border"><b>Gijima — Field Service Engineer</b><p class="text-sm text-slate-600 mt-2">Field engineering, troubleshooting, customer-facing IT services.</p></div>
+    <div class="bg-white p-5 rounded-xl border"><b>Innovation Group UK — Admin Tech</b><p class="text-sm text-slate-600 mt-2">Enterprise administration and operational service delivery.</p></div>
+  </div>
+</section>
+
+<!-- PORTFOLIO - ONLY 3 FLAGSHIPS -->
+<section id="portfolio" class="max-w-6xl mx-auto px-6 py-10">
+  <h3 class="text-2xl font-bold">Featured Production SaaS (Live & Charging)</h3>
+  <div class="grid md:grid-cols-3 gap-6 mt-6">
+    <div class="bg-white rounded-2xl border shadow-sm p-6">
+      <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">LIVE + PAYFAST</span>
+      <h4 class="font-bold text-xl mt-3">BookEasy</h4>
+      <p class="text-sm text-slate-600 mt-2">Glossy booking SaaS for barbers, tutors, churches. Problem: No simple booking + payments for SA SMEs.</p>
+      <p class="text-xs mt-3">React • Node • Firebase • PayFast</p>
+      <div class="flex gap-2 mt-4"><a class="text-blue-600 font-bold text-sm" href="#">Live Demo ↗</a><a class="text-slate-600 font-bold text-sm" href="#">GitHub ↗</a></div>
+    </div>
+    <div class="bg-white rounded-2xl border shadow-sm p-6 ring-2 ring-blue-600">
+      <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded">FLAGSHIP • POWER BI</span>
+      <h4 class="font-bold text-xl mt-3">WeatherAnalystApp.com</h4>
+      <p class="text-sm text-slate-600 mt-2">Weather → Business decisions. 30-day analytics, rain risk, farming advice for African markets.</p>
+      <p class="text-xs mt-3">Next.js • TS • Prisma • PostgreSQL • Power BI</p>
+      <div class="flex gap-2 mt-4"><a class="text-blue-600 font-bold text-sm" href="#">Live Demo ↗</a><a class="text-slate-600 font-bold text-sm" href="#">GitHub ↗</a></div>
+    </div>
+    <div class="bg-white rounded-2xl border shadow-sm p-6">
+      <span class="bg-slate-100 text-slate-700 text-xs font-bold px-2 py-1 rounded">REAL-TIME</span>
+      <h4 class="font-bold text-xl mt-3">MiniChat T3</h4>
+      <p class="text-sm text-slate-600 mt-2">Modern chat with Next.js 14 architecture, Neon PostgreSQL, auth - shows senior Next.js skills.</p>
+      <p class="text-xs mt-3">Next.js • TypeScript • Neon • Prisma</p>
+      <div class="flex gap-2 mt-4"><a class="text-blue-600 font-bold text-sm" href="#">Live Demo ↗</a><a class="text-slate-600 font-bold text-sm" href="#">GitHub ↗</a></div>
+    </div>
+  </div>
+  <p class="text-sm text-slate-500 mt-4">+ 9 more projects on GitHub (Django booking, Madi Alert, etc) - archived for focus.</p>
+</section>
+
+<!-- FOOTER CONTACT -->
+<section class="bg-slate-900 text-white mt-12">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6">
+    <div><h4 class="font-bold text-xl">Let's build something that charges.</h4><p class="text-slate-400 mt-2">Open to: Full Stack Remote, Contract MVP builds, Power BI dashboards</p></div>
+    <div class="flex gap-3"><a href="mailto:" class="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold">Email Me</a><a href="#" class="border border-slate-700 px-6 py-3 rounded-xl font-bold">WhatsApp</a></div>
+  </div>
+</section>
+
+</body>
+</html>
