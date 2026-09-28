@@ -1,262 +1,89 @@
-# Samuel Muvhango — Full Stack Web Developer
+# Samuel Muvhango — Full Stack Developer (MERN, Django, Power BI) | Ex-Dimension Data, T-Systems
 
-## FULL STACK WEB DEVELOPER | IT & SYSTEMS ENGINEER
+**Enterprise IT Engineer → SaaS Builder | Johannesburg, SA | Open to Remote Worldwide**
 
-Samuel Muvhango is a Full Stack Web Developer and IT & Systems Engineer based in Johannesburg, South Africa, with a background in IT support, systems engineering, infrastructure, and modern web application development.
+I don't build todo apps. I build production SaaS that takes payments. 10+ years enterprise IT at Dimension Data, T-Systems/SASOL, Gijima + now shipping MERN, Django, Next.js, Power BI products live.
 
-I build practical, responsive, database-driven web applications and enjoy turning real-world problems into working software.
+- **Flagship:** [WeatherAnalystApp.com](https://mini-weather-app-1.onrender.com) - Weather → Business Decisions (MERN + Power BI + Paystack Ready)
+- **Stack:** React, Next.js, TypeScript, Node.js, Django, PostgreSQL, MongoDB, Prisma, Firebase
+- **Deploy:** Vercel, Render, Neon, Firebase, AWS/Azure Fundamentals
+- **Edge:** Active Directory, Exchange, MDM/AirWatch, VPN, SLA, VIP support - I ship AND support
 
-> **Python is my programming language.**
-
----
-
-## 👨‍💻 Professional Profile
-
-* **Role:** Full Stack Web Developer | IT & Systems Engineer
-* **Location:** Johannesburg, South Africa
-* **Availability:** Hybrid, onsite and worldwide remote opportunities
-* **Primary programming language:** Python
-* **Web development:** Django, HTMX, JavaScript, TypeScript, React, Next.js, Node.js, Express.js, MERN
-* **Databases:** PostgreSQL, MongoDB, Prisma
-* **Cloud & platforms:** AWS, Microsoft Azure, Firebase, Render, Vercel
-* **Development tools:** Git, GitHub, REST APIs, authentication and deployment
+📧 muvhangos@gmail.com | 🌍 [Portfolio](https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/) | 💼 [LinkedIn](https://www.linkedin.com/in/samuel-muvhango-78821a112)
 
 ---
 
-## 🛠️ Technical Skills
+### 🚀 Featured - Only What Pays (Live & Production)
 
-### Programming & Web Development
+**1. WeatherAnalystApp — FLAGSHIP** `Next.js, TypeScript, Prisma, PostgreSQL, Power BI, Open-Meteo`
+- Problem: SA farmers/events/logistics lose money to weather
+- Solution: 30-day analytics, rain risk score, farming advice
+- Live: https://mini-weather-app-1.onrender.com
+- Code: https://github.com/muvhangos/mini-weather-app
 
-* Python
-* JavaScript
-* TypeScript
-* HTML5
-* CSS3
-* React.js
-* Next.js
-* Node.js
-* Express.js
-* Django
-* HTMX
-* MERN Stack
+**2. BookEasy — Booking SaaS with Payments** `React, Node, Firebase, PayFast, Maps`
+- Glossy booking platform for barbers, tutors, churches, fitness - with payment integration
+- Live: https://bookeasy-nine.vercel.app | API: https://bookeasy-api-olsc.onrender.com/health
+- Code: https://github.com/muvhangos/-bookeasy
 
-### Databases & Backend
+**3. MiniChat T3 — Real-time Chat** `Next.js 14, TypeScript, Prisma, Neon PostgreSQL`
+- Modern architecture, auth, chat - proves senior Next.js skills
+- Live: https://minichat-t3-final-project-1-1.onrender.com
+- Code: https://github.com/muvhangos/minichat-t3-final-project-1
 
-* PostgreSQL
-* MongoDB
-* Prisma
-* REST APIs
-* CRUD applications
-* Authentication and authorization
-* JWT
-* Firebase Authentication
-
-### Cloud & Deployment
-
-* AWS
-* Microsoft Azure
-* Firebase
-* Render
-* Vercel
-* GitHub Pages
-
-### IT & Systems
-
-* IT support
-* Systems engineering
-* Microsoft technologies
-* Active Directory
-* Messaging systems
-* VPN, Wi-Fi and mobile device support
-* MDM / AirWatch
-* SLA and incident management
-* Remote and VIP technical support
+> + 9 more on GitHub (Django booking, Madi Alert, dashboards). Archived to keep focus on revenue products.
 
 ---
 
-## 🚀 Featured Projects
+### 🛠️ Stack - What I Ship With
 
-### 🌦️ Mini Weather App
-
-A modern weather application built with Next.js, TypeScript, Tailwind CSS and Open-Meteo.
-
-* **Live:** https://mini-weather-app-1.onrender.com
-* **GitHub:** https://github.com/muvhangos/mini-weather-app
-
-### 💬 MiniChat T3
-
-A full-stack chat application using Next.js, Prisma and PostgreSQL/Neon.
-
-* **Live:** https://minichat-t3-final-project-1-1.onrender.com
-* **GitHub:** https://github.com/muvhangos/minichat-t3-final-project-1
-
-### 📅 BookEasy
-
-A full-stack service and appointment booking application with Firebase authentication, booking history, administration, maps and payment integration.
-
-* **Live:** https://bookeasy-nine.vercel.app
-* **GitHub:** https://github.com/muvhangos/-bookeasy
-* **Backend:** https://bookeasy-api-olsc.onrender.com/health
-
-### 📋 Simple Service Booking
-
-A Django-based service booking application with user registration, authentication and service booking.
-
-* **Live:** https://simple-service-booking.onrender.com
-* **GitHub:** https://github.com/muvhangos/simple-service-booking
-
-### 💧 Madi Alert
-
-A water-fault reporting application designed to allow users to report water-related problems, including photographs and location information.
-
-* **GitHub:** https://github.com/muvhangos/madi-alert
-
-### 🌐 Web Programming Bootcamp
-
-A collection of web programming work covering Python, Django, HTMX, JavaScript, React, Node.js and related full-stack technologies.
-
-* **GitHub:** https://github.com/muvhangos/web-programming-bootcamp
-
-### 😂 Jokeroo
-
-A joke generator web application.
-
-* **GitHub:** https://github.com/muvhangos/Jokeroo.app
-
-### 🏫 Nanga Primary School
-
-A school-focused web project.
-
-* **GitHub:** https://github.com/muvhangos/Nanga-Primary-School
-
-### 📊 Nanga Admin Dashboard
-
-An administrative dashboard project.
-
-* **GitHub:** https://github.com/muvhangos/Nanga-Admin-Dashboard
-
-### ⚛️ MERN Stack Projects
-
-Projects demonstrating MongoDB, Express, React and Node.js development.
-
-* **GitHub:** https://github.com/muvhangos/MERN-Stuck
-
-### 🛠️ Request Service App
-
-A service-request application.
-
-* **GitHub:** https://github.com/muvhangos/Request-Service-App
+**Frontend:** React, Next.js, TypeScript, JavaScript, Tailwind, HTMX
+**Backend:** Node.js, Express, Django, Python, REST APIs, JWT, Prisma ORM
+**Data:** PostgreSQL, MongoDB, Firebase, Power BI, Python
+**DevOps:** Git, GitHub, Vercel, Render, Firebase, AWS/Azure Fundamentals
+**Enterprise IT:** AD, Exchange, Messaging, MDM/AirWatch, VPN, Wi-Fi, SLA, Incident Management
 
 ---
 
-## 🎓 Education & Training
+### 💼 Enterprise Experience (My Unfair Advantage)
 
-### Code College ZA
+**T-Systems / SASOL — Migration Engineer**
+Enterprise migrations (500+ users), Linux, AirWatch MDM, Lync, Exchange, VPN, remote/VIP support, SLA bridges
 
-**Full Stack Web Developer / Web Development Bootcamp**
-2024 – Current
+**Dimension Data — AD & Messaging Engineer**
+Enterprise Active Directory, messaging infrastructure, infrastructure support
 
-Hands-on development using:
+**Gijima — Field Service Engineer**
+Field engineering, troubleshooting, customer-facing IT
 
-* HTML
-* CSS
-* JavaScript
-* React
-* Node.js
-* Express.js
-* Python
-* Django
-* HTMX
-* MERN
-* Git & GitHub
+**Innovation Group UK — Admin Tech**
+Enterprise administration, service delivery
 
-### Web Programming Bootcamp
-
-Training covering Python, Django, HTMX, REST APIs, MongoDB, CRUD and authentication.
-
-### Richfield Graduate Institute of Technology
-
-**BSc Information Technology** — currently studying.
+→ This is why I don't just code. I deploy, support, and keep SLAs.
 
 ---
 
-## 🏅 Certifications
+### 🎓 Training & Certs
 
-* Introduction to Programming — Code College ZA
-* Python — Code College ZA
-* Full Stack Web Development Bootcamp — Code College
-* AWS Essentials
-* Microsoft Azure Fundamentals — AZ-900
-* Microsoft Azure AI Fundamentals — AI-900
-* AWS Solutions Architect — Associate
-* Microsoft MCID
-* Fortinet Network Security Expert
-* Fortinet NSE1–NSE3
+**Code College ZA — Full Stack Bootcamp (2024-Current)**
+MERN, Python, Django, React, Next.js, Node.js, Git
+
+**Certs:** AWS Essentials, Azure AZ-900, Azure AI-900, AWS SA Associate, Fortinet NSE1-3, MCID
+
+Currently: BSc IT - Richfield Graduate Institute
 
 ---
 
-## 💼 IT & Systems Experience
+### 🎯 Open To
 
-My development career is supported by extensive professional IT experience, including work with:
+Full Stack Developer (MERN/Django) | Python Developer | React/Next.js Developer | SaaS Builder | IT Systems Engineer who codes
 
-* Innovation Group UK
-* Gijima
-* Dimension Data
-* T-Systems / SASOL
-
-Experience includes technical support, systems administration, infrastructure, messaging, migrations, mobile device management, VIP support, incident management and SLA-driven service delivery.
-
-This combination allows me to approach software development with both a **developer's mindset and an experienced IT systems perspective**.
+Remote, Hybrid, Onsite - SA, UK, EU, US
 
 ---
 
-## 🌍 Portfolio & Professional Profiles
+### 📊 GitHub Stats
 
-* **Portfolio:** https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/
-* **LinkedIn:** https://www.linkedin.com/in/samuel-muvhango-78821a112
-* **GitHub:** https://github.com/muvhangos
-* **Email:** [muvhangos@gmail.com](mailto:muvhangos@gmail.com)
+I commit daily. Check my green graph.
 
----
-
-## 🎯 Career Objective
-
-I am looking for opportunities where I can combine my IT systems background with modern full-stack development.
-
-I am particularly interested in:
-
-* Full Stack Developer
-* Python Developer
-* Django Developer
-* Web Developer
-* React Developer
-* Node.js Developer
-* MERN Developer
-* Software Developer
-* IT & Systems Engineer
-* Technical Lead / Application Support roles
-
-I am open to **South African, international, remote, hybrid and onsite opportunities**.
-
----
-
-## ⭐ Why Work With Me?
-
-I bring together:
-
-**IT Infrastructure + Systems Engineering + Full Stack Development + Cloud + Problem Solving**
-
-My goal is not only to write code, but to understand the business problem, build a practical solution, deploy it, support it and continuously improve it.
-
----
-
-## 📌 Portfolio Repository
-
-This repository contains my personal developer portfolio and professional profile.
-
-**Portfolio:**
-https://muvhangos.github.io/Samuel-Muvhango--Full-Stack-Web-Developer/
-
----
-
-© 2026 Samuel Muvhango. All rights reserved.
+**Let's build something that charges:** muvhangos@gmail.com
